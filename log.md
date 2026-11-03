@@ -33,3 +33,10 @@
 | 2026-11-01 | Organon & History | Six editions of the Organon: 1810–1833 in his lifetime, 6th written 1842, printed 1921; LM potencies in 6th (§270) | Why was Hahnemann’s last Organon published 78 years late? | Hahnemann, Organon (6th ed.) §270; Haehl, Life and Works of Samuel Hahnemann | 6ae6b3aaf0984eef3345d7a9 (scheduled 19:00 IST) |
 | 2026-11-02 | Materia Medica | Pulsatilla vs Sepia: both tearful; mild/wants comfort/thirstless/better open air vs irritable/indifferent to loved ones/better vigorous exercise | Pulsatilla or Sepia? Both can weep. | Boericke's Materia Medica | 6ae805a3083019e0c99d335b (scheduled 19:00 IST) |
 | 2026-11-03 | Pharmacy 101 | Vehicles: what's inside a globule (alcohol-water, lactose, sucrose; label decoding) | What's actually inside a globule? | Homoeopathic Pharmacopoeia of India; standard homoeopathic pharmacy textbooks | 6ae9568694b13c6dd7923398 (scheduled 19:00 IST) |
+
+# Content log (daily routine, from 2026-11-04)
+
+| date | type | series/theme | topic | hook | source | footage | Buffer post id | scheduled time | utm_campaign |
+|---|---|---|---|---|---|---|---|---|---|
+| 2026-11-04 | carousel | Clinical Reference (quiz) | Guess the remedy: Lycopodium (few mouthfuls fill up; worse 4–8 PM; right to left; vs Carbo veg and China bloating) | Full after two bites. Worse by 4 PM. | Boericke's Materia Medica; Allen's Keynotes | n/a | 6aea26cb4132b75c1ecc6f9d | 2026-11-04 19:00 IST | 2026-11-04-guess-the-remedy-lycopodium |
+| 2026-11-04 | story | Carousel teaser | Teaser of the Lycopodium quiz cover | New post on our profile | — | n/a | 6aea26cd02521ecbfd8fa721 | 2026-11-04 19:30 IST | 2026-11-04-guess-the-remedy-lycopodium |

@@ -1,0 +1,247 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<style>
+@font-face{font-family:Inter;font-weight:600;src:url(fonts/inter-latin-600-normal.woff2)}
+@font-face{font-family:Inter;font-weight:700;src:url(fonts/inter-latin-700-normal.woff2)}
+@font-face{font-family:Inter;font-weight:800;src:url(fonts/inter-latin-800-normal.woff2)}
+@font-face{font-family:Poppins;font-weight:400;src:url(fonts/poppins-latin-400-normal.woff2)}
+@font-face{font-family:Poppins;font-weight:500;src:url(fonts/poppins-latin-500-normal.woff2)}
+@font-face{font-family:Poppins;font-weight:600;src:url(fonts/poppins-latin-600-normal.woff2)}
+:root{--ink:#070C1F;--jade:#10B880;--jd:#06805A;--jod:#5FD6AC;--tint:#E8F8F1;--line:#CDEFE0;--muted:#6A7385;--txt:#0B1220}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1080px;height:1920px;overflow:hidden;background:transparent}
+body{font-family:Poppins;color:#fff;position:relative}
+#bg{position:absolute;inset:0;background:var(--ink)}
+#dots{position:absolute;left:-200px;top:-200px;width:1480px;height:2400px;background-image:radial-gradient(rgba(95,214,172,.10) 2px,transparent 2.5px);background-size:48px 48px}
+#shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(7,12,31,.9) 0%,rgba(7,12,31,.55) 22%,rgba(7,12,31,.0) 38%,rgba(7,12,31,0) 55%,rgba(7,12,31,.75) 78%,rgba(7,12,31,.9) 100%);opacity:0}
+.scene{position:absolute;inset:0;opacity:0}
+.head{position:absolute;left:72px;right:72px;top:250px;font-family:Inter;font-weight:800;font-size:86px;line-height:1.04;letter-spacing:-2.5px}
+.head .a{color:var(--jade)}
+.sub{font-family:Poppins;font-weight:500;font-size:40px;letter-spacing:0;color:rgba(255,255,255,.78);margin-top:18px;line-height:1.3}
+.card{position:absolute;left:72px;width:936px;background:#fff;border-radius:32px;color:var(--txt);box-shadow:0 40px 80px -45px rgba(8,58,44,.45),0 0 0 2px rgba(16,184,128,.18);overflow:hidden}
+.ctitle{display:flex;align-items:center;gap:16px;font-family:Inter;font-weight:700;font-size:40px;padding:36px 40px 0}
+.ico{width:52px;height:52px;border-radius:14px;background:var(--tint);display:flex;align-items:center;justify-content:center;color:var(--jd);flex:none}
+.ico svg{width:30px;height:30px}
+.csub{font-size:28px;color:var(--muted);padding:6px 40px 0 108px}
+/* search */
+.tabs{display:flex;gap:14px;padding:28px 40px 0}
+.tab{font-size:28px;padding:10px 22px;border-radius:14px;border:2px solid #E3E7EF;color:#4A5468}
+.tab.on{background:var(--tint);border-color:#9fe3c8;color:var(--jd);font-weight:600}
+.input{margin:24px 40px 0;height:96px;border-radius:20px;border:3px solid var(--jade);display:flex;align-items:center;gap:18px;padding:0 28px;font-size:40px;color:var(--txt)}
+.input svg{width:36px;height:36px;color:#8A93A6;flex:none}
+.caret{display:inline-block;width:3px;height:44px;background:var(--txt);vertical-align:middle;margin-left:2px}
+.btn{margin:20px 40px 0;height:84px;border-radius:20px;background:linear-gradient(90deg,#12A874,#0B8F62);color:#fff;font-weight:600;font-size:34px;display:flex;align-items:center;justify-content:center;gap:12px}
+.results{padding:26px 40px 30px}
+.rcount{font-family:Inter;font-weight:700;font-size:34px;margin-bottom:14px}
+.row{border:2px solid #E6EAF1;border-radius:20px;padding:18px 22px;margin-bottom:14px;display:flex;align-items:center;gap:14px;background:#fff}
+.row .t{flex:1}
+.tag{display:inline-block;font-size:23px;font-weight:600;color:var(--jd);background:var(--tint);border-radius:8px;padding:2px 10px;margin-bottom:6px}
+.rt{font-family:Inter;font-weight:700;font-size:39px;letter-spacing:-.3px}
+.see{font-size:25px;color:var(--muted);margin-top:4px}
+.see b{color:var(--jd);font-weight:500}
+.plus{width:64px;height:64px;border-radius:16px;border:2px solid #E3E7EF;display:flex;align-items:center;justify-content:center;font-size:40px;color:var(--jade);flex:none;font-weight:500}
+.plus.on{background:var(--jade);border-color:var(--jade);color:#fff}
+/* sheet */
+.chip{margin:22px 40px 0;border:2px solid var(--line);background:var(--tint);border-radius:18px;padding:18px 24px}
+.chip .rt{font-size:34px}
+.imp{font-size:24px;color:var(--muted);margin-top:6px}
+.ra{font-size:26px;color:var(--muted);padding:26px 40px 8px;font-weight:500;letter-spacing:1px;text-transform:uppercase}
+.rem{margin:0 40px 12px;border:2px solid #E6EAF1;border-radius:18px;padding:12px 22px}
+.rem.top{border-color:#9fe3c8;background:#F3FBF7}
+.rem .l1{display:flex;align-items:baseline;gap:14px}
+.rem .ab{font-family:Inter;font-weight:800;font-size:44px}
+.rem .fn{font-size:29px;color:var(--muted);flex:1}
+.rem .pc{font-size:22px;font-weight:600;color:var(--jd);background:var(--tint);border-radius:8px;padding:2px 10px}
+.rem .l2{font-size:25px;color:var(--muted);margin-top:4px}
+.bar{height:10px;border-radius:6px;background:#EEF1F6;margin-top:10px;overflow:hidden}
+.bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,#22CC93,#06805A);border-radius:6px}
+/* vita */
+.vhead{display:flex;align-items:center;gap:16px;padding:30px 36px;border-bottom:2px solid #EEF1F6}
+.vlogo{width:60px;height:60px;border-radius:16px;background:linear-gradient(135deg,#22CC93,#06805A);display:flex;align-items:center;justify-content:center;color:#fff;font-size:34px}
+.vn{font-family:Inter;font-weight:700;font-size:36px}.vs{font-size:24px;color:var(--muted)}
+.ubub{margin:24px 36px 0 120px;background:var(--jade);color:#fff;border-radius:26px 26px 6px 26px;padding:22px 28px;font-size:33px;line-height:1.35}
+.ans{margin:26px 36px 32px;font-size:26px}
+.ans h4{font-family:Inter;font-weight:700;font-size:32px;margin-bottom:14px}
+table{width:100%;border-collapse:separate;border-spacing:0;border:2px solid #E6EAF1;border-radius:18px;overflow:hidden;font-size:28px;line-height:1.28}
+th{background:#F0F3FA;text-align:left;padding:14px 16px;font-weight:600}
+td{padding:14px 16px;border-top:2px solid #EEF1F6;vertical-align:top;color:#3B4658}
+td:first-child{font-weight:600;color:var(--txt)}
+td.hl{background:var(--tint);color:var(--jd);font-weight:600}
+.src{margin-top:16px;display:inline-flex;gap:10px;align-items:center;border:2px solid var(--line);background:#F3FBF7;color:var(--jd);border-radius:14px;padding:8px 18px;font-size:24px;font-weight:500}
+/* consult */
+.secs{padding:18px 40px 34px}
+.sec{display:flex;align-items:center;gap:20px;font-size:36px;padding:9px 0;border-bottom:2px solid #F0F3FA}
+.sec:last-child{border:0}
+.dot{width:52px;height:52px;border-radius:50%;border:2px solid #D6DCE6;display:flex;align-items:center;justify-content:center;font-size:24px;color:var(--muted);flex:none;position:relative}
+.dot.ok{background:var(--jade);border-color:var(--jade);color:#fff}
+.badge{position:absolute;right:40px;top:40px;font-size:26px;font-weight:600;color:var(--jd);background:var(--tint);border:2px solid #9fe3c8;border-radius:14px;padding:8px 16px}
+.prog{height:12px;border-radius:8px;background:#EEF1F6;margin:22px 40px 0}
+.prog i{display:block;height:100%;border-radius:8px;background:var(--jade)}
+/* captions */
+#cap{position:absolute;left:72px;right:72px;top:1310px;display:flex;justify-content:center}
+#cap span{background:rgba(7,12,31,.78);border-radius:18px;padding:14px 26px;font-weight:500;font-size:40px;line-height:1.35;text-align:center;max-width:936px;color:#fff}
+#cap span b{color:var(--jod);font-weight:600}
+/* kinetic on clip */
+.kin{position:absolute;left:72px;right:72px;font-family:Inter;font-weight:800;font-size:104px;letter-spacing:-3px;line-height:1;text-shadow:0 4px 30px rgba(0,0,0,.55)}
+/* cta */
+.cta{position:absolute;left:0;right:0;text-align:center}
+</style></head>
+<body>
+<div id="bg"><div id="dots"></div></div>
+<div id="shade"></div>
+
+<!-- shared remedy analysis card (hook + p2 + loop) -->
+<div class="card" id="sheet" style="top:620px">
+  <div class="ctitle"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></div>Repertory Sheet</div>
+  <div class="chip" id="chip"><div class="rt">ABDOMEN - FLATULENCE</div><div class="imp">Importance: Normal (1x)</div></div>
+  <div class="ra">Remedy Analysis</div>
+  <div id="rems"></div>
+</div>
+
+<!-- hook head -->
+<div class="scene" id="s-hook"><div class="head">Rubrics to remedy.<br><span class="a">One screen.</span></div></div>
+
+<!-- clip A kinetic -->
+<div class="scene" id="s-a">
+  <div class="kin" id="k1" style="top:300px">Three books open.</div>
+  <div class="kin" id="k2" style="top:450px;color:var(--jod)">Patient waiting.</div>
+</div>
+
+<!-- p1 search -->
+<div class="scene" id="s-p1">
+  <div class="head" id="h1">Search the repertory<div class="sub">right inside your consultation</div></div>
+  <div class="card" id="search" style="top:520px">
+    <div class="ctitle"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20V3H6.5A2.5 2.5 0 0 0 4 5.5v14zM20 17v4H6.5"/></svg></div>Repertory Search</div>
+        <div class="input"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><span id="q"></span><span class="caret" id="caret"></span></div>
+    <div class="btn" id="sbtn">Search</div>
+    <div class="results" id="res">
+      <div class="rcount">Results (295)</div>
+      <div class="row" id="row0"><div class="t"><span class="tag">Hello Repertory</span><div class="rt">ABDOMEN - FLATULENCE</div><div class="see">See also: <b>ABDOMEN - DISTENSION, ABDOMEN - GAS</b></div></div><div class="plus" id="plus0">+</div></div>
+      <div class="row"><div class="t"><span class="tag">Hello Repertory</span><div class="rt">STOMACH - FLATULENCE agg.</div><div class="see">See also: <b>STOMACH - DISTENSION</b></div></div><div class="plus">+</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- p2 head -->
+<div class="scene" id="s-p2"><div class="head">Remedy analysis<br><span class="a">builds as you go</span></div></div>
+
+<!-- p3 vita -->
+<div class="scene" id="s-p3">
+  <div class="head">Torn between two?<br><span class="a">Ask Vita.</span></div>
+  <div class="card" id="vita" style="top:520px">
+    <div class="vhead"><div class="vlogo">✦</div><div><div class="vn">Vita AI</div><div class="vs">Homeopathic clinical assistant</div></div></div>
+    <div class="ubub" id="ub">Compare Nux Vomica and Lycopodium for digestive complaints</div>
+    <div class="ans" id="ans"><h4>Clinical Summary of Differences</h4>
+      <table><tr><th>Feature</th><th>Nux Vomica</th><th>Lycopodium</th></tr>
+            <tr class="vr"><td>Timing of Bloating</td><td>Several hours post-eating</td><td>Immediately after eating (even small amounts)</td></tr>
+      <tr class="vr"><td>Time Modality</td><td>Morning / post-eating</td><td class="hl">4:00 PM to 8:00 PM</td></tr></table>
+    </div>
+  </div>
+</div>
+
+<!-- result consult -->
+<div class="scene" id="s-res">
+  <div class="head">Prescription.<br><span class="a">Same screen.</span></div>
+  <div class="card" id="cons" style="top:540px">
+    <div class="ctitle">Consultation</div>
+    <div class="csub" style="padding-left:40px">Follow-up · 4/6 sections</div>
+    <div class="badge" id="badge">✓ Completed</div>
+    <div class="prog"><i id="pbar" style="width:10%"></i></div>
+    <div class="secs">
+      <div class="sec"><div class="dot" data-ok="0.25">1</div>Patient Info</div>
+      <div class="sec"><div class="dot">2</div>Physical Exam</div>
+      <div class="sec"><div class="dot">3</div>Mental State</div>
+      <div class="sec"><div class="dot" data-ok="0.55">4</div>Investigations</div>
+      <div class="sec"><div class="dot" data-ok="0.85">5</div>Notes</div>
+      <div class="sec" id="rxrow"><div class="dot" data-ok="1.2">6</div><b style="font-weight:600">Prescription</b></div>
+    </div>
+  </div>
+</div>
+
+<!-- cta -->
+<div class="scene" id="s-cta">
+  <div class="cta" id="c1" style="top:430px"><div id="clogo" style="width:200px;height:200px;margin:0 auto"></div></div>
+  <div class="cta" id="c2" style="top:670px;font-family:Inter;font-weight:800;font-size:110px;letter-spacing:-3px">HelloHomeo</div>
+  <div class="cta" id="c3" style="top:820px;font-family:Inter;font-weight:700;font-size:64px;color:var(--jade)">hellohomeo.in</div>
+  <div class="cta" id="c4" style="top:960px"><span style="display:inline-block;border:3px solid var(--jade);border-radius:24px;padding:22px 40px;font-family:Inter;font-weight:800;font-size:58px;letter-spacing:-1px">30-day free trial</span>
+    <div style="font-size:40px;color:rgba(255,255,255,.8);margin-top:24px">Full access to all features.</div></div>
+</div>
+
+<div id="cap"><span id="capt"></span></div>
+
+<script>
+const REMS=[['aloe','aloe socotrina'],['am-m.','ammonium muriaticum'],['arg-n.','argentum nitricum']];
+document.getElementById('rems').innerHTML=REMS.map((r,i)=>`<div class="rem ${i==0?'top':''}"><div class="l1"><span class="ab">${r[0]}</span><span class="fn">${r[1]}</span><span class="pc">100%</span></div><div class="l2">Score: 3 · Rubrics: 1/1 · Max: 3</div><div class="bar"><i></i></div></div>`).join('');
+fetch('logo-dark.svg').then(r=>r.text()).then(s=>{document.getElementById('clogo').innerHTML=s.replace('<svg','<svg width="200" height="200"')});
+const $=id=>document.getElementById(id);
+const cl=(x,a=0,b=1)=>Math.min(b,Math.max(a,x));
+const quint=x=>1-Math.pow(1-cl(x),5);
+const cubicIO=x=>{x=cl(x);return x<.5?4*x*x*x:1-Math.pow(-2*x+2,3)/2};
+const back=x=>{x=cl(x);const c1=1.4,c3=c1+1;return 1+c3*Math.pow(x-1,3)+c1*Math.pow(x-1,2)};
+const inC=x=>Math.pow(cl(x),3);
+const prog=(t,a,d)=>cl((t-a)/d);
+function set(el,o,y=0,s=1,x=0){el.style.opacity=o;el.style.transform=`translate(${x}px,${y}px) scale(${s})`}
+const S={hook:[0,2.0],a:[2.0,7.0],p1:[7.0,11.04],p2:[11.04,14.50],p3:[14.50,18.54],res:[18.54,21.42],b:[21.42,24.31],cta:[24.31,30.0]};
+const CAPS=[[2.0,3.1,'Three books open.'],[3.58,5.1,'A rubric you half remember.'],[5.82,6.7,'A patient waiting.'],[7.48,10.4,'Now, search the repertory right inside your consultation.'],[11.18,14.3,'Add your rubrics, and the remedy analysis builds as you go.'],[15.0,15.7,'Torn between two?'],[16.18,18.9,'Ask <b>Vita</b> to compare them, keynote by keynote.'],[19.38,21.4,'Then write the prescription on the same screen.'],[22.1,25.95,'<b>HelloHomeo.</b> 30-day free trial with full access to all features.'],[25.95,27.9,'<b>hellohomeo.in</b>']];
+const inS=(t,k)=>t>=S[k][0]&&t<S[k][1];
+const loc=(t,k)=>t-S[k][0];
+function bars(p){document.querySelectorAll('#rems .bar i').forEach((b,i)=>{b.style.width=(100*quint((p*1.6)-i*0.15))+'%'})}
+window.seek=function(t){
+  const clip=inS(t,'a')||inS(t,'b');
+  $('bg').style.opacity=clip?0:1; $('shade').style.opacity=clip?1:0;
+  $('dots').style.transform=`translateY(${-t*16}px)`;
+  ['s-hook','s-a','s-p1','s-p2','s-p3','s-res','s-cta'].forEach(id=>$(id).style.opacity=0);
+  const sh=$('sheet'); sh.style.opacity=0;
+  // HOOK (frame 0 identical to loop end)
+  if(inS(t,'hook')){ const l=loc(t,'hook'); $('s-hook').style.opacity=1; set(sh,1,0,1); sh.style.top='620px';
+    bars(0.12+l*0.55); $('chip').style.opacity=1;
+    if(l>1.7) { const e=inC((l-1.7)/0.3); set(sh,1-e,-60*e,1); $('s-hook').style.opacity=1-e; } }
+  // CLIP A
+  if(inS(t,'a')){ const l=loc(t,'a'); $('s-a').style.opacity=1;
+    const e1=quint(l/0.5); set($('k1'),e1,40*(1-e1)); const e2=quint((l-3.8)/0.5); set($('k2'),e2,40*(1-e2));
+    if(l>4.75){const e=inC((l-4.75)/0.25); $('s-a').style.opacity=1-e;} }
+  // P1
+  if(inS(t,'p1')){ const l=loc(t,'p1'); $('s-p1').style.opacity=1;
+    const e=quint(l/0.6); set($('search'),e,140*(1-e),.98+.02*e); set($('h1'),quint((l-0.1)/0.5),30*(1-quint((l-0.1)/0.5)));
+    const word='flatulence'; const n=Math.floor(cl((l-0.5)/0.45)*word.length); $('q').textContent=word.slice(0,n);
+    $('caret').style.opacity=(Math.floor(l*2.5)%2==0||n<word.length)?1:0;
+    const pr=quint((l-1.15)/0.25); $('sbtn').style.transform=`scale(${1-0.04*Math.sin(Math.PI*cl((l-1.0)/0.3))})`;
+    const res=$('res'); const rr=quint((l-1.35)/0.6); res.style.opacity=rr; res.style.transform=`translateY(${60*(1-rr)}px)`;
+    res.querySelectorAll('.row').forEach((r,i)=>{const q=quint((l-1.45-i*0.09)/0.5); set(r,q,50*(1-q));});
+    const add=l>3.3; $('plus0').classList.toggle('on',add); $('plus0').textContent=add?'✓':'+';
+    $('plus0').style.transform=`scale(${add?back((l-3.3)/0.3):1})`;
+    if(l>3.75){const x=inC((l-3.75)/0.29); $('search').style.opacity=1-x; $('h1').style.opacity=1-x;} }
+  // P2 match cut: chip comes from search row position
+  if(inS(t,'p2')){ const l=loc(t,'p2'); $('s-p2').style.opacity=1; sh.style.opacity=1;
+    const e=quint(l/0.6); sh.style.top='520px'; sh.style.transform=`translateY(${(1-e)*360}px)`;
+    $('chip').style.opacity=1; bars((l-0.5)/1.6);
+    if(l>3.2){const x=inC((l-3.2)/0.26); sh.style.opacity=1-x; $('s-p2').style.opacity=1-x;} }
+  // P3 vita
+  if(inS(t,'p3')){ const l=loc(t,'p3'); $('s-p3').style.opacity=1;
+    const e=quint(l/0.6); set($('vita'),e,140*(1-e),.98+.02*e);
+    const ub=quint((l-0.35)/0.45); set($('ub'),ub,30*(1-ub));
+    const an=quint((l-1.0)/0.4); $('ans').style.opacity=an;
+    document.querySelectorAll('#vita .vr').forEach((r,i)=>{const q=quint((l-1.2-i*0.35)/0.45); r.style.opacity=q;});
+    
+    if(l>3.8){const x=inC((l-3.8)/0.24); $('s-p3').style.opacity=1-x;} }
+  // RESULT
+  if(inS(t,'res')){ const l=loc(t,'res'); $('s-res').style.opacity=1;
+    const e=quint(l/0.6); set($('cons'),e,140*(1-e),.98+.02*e);
+    let k=0; document.querySelectorAll('#cons .dot').forEach(d=>{const at=+d.dataset.ok; if(at){ const on=l>at; d.classList.toggle('ok',on); d.textContent=on?'✓':d.dataset.n||(d.dataset.n=d.textContent); d.style.transform=`scale(${on?back((l-at)/0.3):1})`; if(on)k++; }});
+    $('pbar').style.width=(10+k*15)+'%';
+    const b=back((l-1.6)/0.35); $('badge').style.opacity=cl((l-1.6)/0.2); $('badge').style.transform=`scale(${0.6+0.4*b})`;
+    if(l>2.66){const x=inC((l-2.66)/0.22); $('s-res').style.opacity=1-x;} }
+  // CTA + loop
+  if(inS(t,'cta')||t>=30){ const l=Math.min(loc(t,'cta'),5.69); $('s-cta').style.opacity=1;
+    ['c1','c2','c3','c4'].forEach((id,i)=>{const q=quint((l-0.15-i*0.18)/0.6); set($(id),q,60*(1-q));});
+    if(l>4.75){ const x=inC((l-4.75)/0.35); ['c1','c2','c3','c4'].forEach(id=>{$(id).style.opacity=1-x; $(id).style.transform=`translateY(${-80*x}px)`;});
+      const e=quint((l-4.95)/0.74); set(sh,e,(1-e)*700,1); sh.style.top='620px'; bars(0.12*e+0); $('chip').style.opacity=e;
+      $('s-hook').style.opacity=quint((l-5.15)/0.54); } }
+  // captions
+  const c=CAPS.find(c=>t>=c[0]&&t<c[1]); $('capt').innerHTML=c?c[2]:''; $('capt').style.display=c?'inline-block':'none';
+  // keep captions off CTA logo block: move up/down
+  $('cap').style.top=inS(t,'cta')?'1340px':'1310px';
+};
+window.ready=document.fonts.ready.then(()=>new Promise(r=>setTimeout(r,300)));
+</script>
+</body></html>

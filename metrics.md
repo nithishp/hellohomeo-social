@@ -11,3 +11,4 @@ Website clicks are measured only by UTM links in Google Analytics. Instagram "pr
 | 2026-10-28 | carousel | Quiz & Exam Prep | Guess the remedy: Gelsemium | 6ae16d8d3d4d083d9123ff9a | — (pre-UTM) | 16 | 6 | 1 | 0 | 0 | 0 | — |
 | 2026-10-29 | carousel | Repertory & Case-taking | Turning patient words into rubrics | 6ae2bf196ffb9bb0dcca3ae7 | — (pre-UTM) | 49 | 8 | 2 | 1 | 4 | 0 | — |
 | 2026-10-30 | carousel | Myth vs Fact | One disease name, one remedy? | 6ae410aa4b8768bfb2d9a08c | — (pre-UTM) | 26 | 7 | 0 | 3 | 2 | 0 | — |
+| 2026-10-31 | carousel | Practice & Clinic | Maintaining causes | 6ae56202b84259308bb6e1ac | — (pre-UTM) | 58 | 8 | 0 | 4 | 4 | 0 | — |

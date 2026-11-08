@@ -1,7 +1,33 @@
 # Metrics
 
 ## This week's read
-_Not written yet. First Sunday review will fill this in (needs ≥3 posts per format before judging)._
+_Updated Sun 2026-11-08 · window 2026-10-11 to 2026-11-07 (4 weeks) · Buffer per-post stats, so recent posts are still climbing._
+
+**Follows:** 1 follow attributed across 52 posts (Nux vomica quiz carousel, 2026-10-21). Buffer reports 0 for every other carousel and no follow figure for reels or stories, so follows per post can't be ranked yet. Check Instagram Insights → Follows for the post ids listed at the bottom.
+
+**By type (per post):**
+| type | posts | reach | saves | shares | follows |
+|---|---|---|---|---|---|
+| reel | 3 (1 by this routine, 2 owner-posted) | 243 | 5.7 | 6.0 | — |
+| carousel | 26 | 61 | 3.2 | 3.0 | 1 total |
+| story | 23 | 28 | n/a | n/a | — |
+
+**Carousels by series (per post):**
+| series | posts | reach | saves | shares |
+|---|---|---|---|---|
+| Organon & History | 4 | 111 | 3.8 | 3.5 |
+| Materia Medica (remedy pairs) | 4 | 60 | 4.8 | 2.8 |
+| Pharmacy 101 | 4 | 56 | 3.8 | 3.8 |
+| Practice & Clinic | 3 | 53 | 3.3 | 3.7 |
+| Myth vs Fact | 3 | 54 | 2.3 | 2.0 |
+| Guess the remedy quizzes (old Quiz + new Clinical Reference quiz) | 4 | 47 | 2.0 | 2.5 |
+| Repertory & Case-taking | 3 | 37 | 1.7 | 2.7 |
+| Clinic in Action (new) | 1 | 56 | 4.0 | 3.0 | 
+
+**Best:** Cinchona: how one tree bark started homeopathy (10-11): reach 187, 14 likes, 4 comments, 6 shares. Reels beat it on raw reach (206–272).
+**Worst:** Guess the remedy: Gelsemium (10-28): reach 16, 0 saves, 0 shares. Lycopodium quiz (11-04) was also low (reach 20).
+
+**Do more of:** reels (about 4× carousel reach), and for Wednesday's Clinical Reference slot, remedy pairs and "Organon concept applied in clinic" over "guess the remedy" quizzes, which had the lowest reach and saves. Stories reach about 28 people each and add nothing measurable, so keep them light.
 
 Website clicks are measured only by UTM links in Google Analytics. Instagram "profile link taps" are not website clicks.
 
@@ -12,3 +38,4 @@ Website clicks are measured only by UTM links in Google Analytics. Instagram "pr
 | 2026-10-29 | carousel | Repertory & Case-taking | Turning patient words into rubrics | 6ae2bf196ffb9bb0dcca3ae7 | — (pre-UTM) | 49 | 8 | 2 | 1 | 4 | 0 | — |
 | 2026-10-30 | carousel | Myth vs Fact | One disease name, one remedy? | 6ae410aa4b8768bfb2d9a08c | — (pre-UTM) | 26 | 7 | 0 | 3 | 2 | 0 | — |
 | 2026-10-31 | carousel | Practice & Clinic | Maintaining causes | 6ae56202b84259308bb6e1ac | — (pre-UTM) | 58 | 8 | 0 | 4 | 4 | 0 | — |
+| 2026-11-01 | carousel | Organon & History | Six editions of the Organon | 6ae6b3aaf0984eef3345d7a9 | — (pre-UTM) | 77 | 9 | 0 | 5 | 3 | 0 | — |

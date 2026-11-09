@@ -39,3 +39,4 @@ Website clicks are measured only by UTM links in Google Analytics. Instagram "pr
 | 2026-10-30 | carousel | Myth vs Fact | One disease name, one remedy? | 6ae410aa4b8768bfb2d9a08c | — (pre-UTM) | 26 | 7 | 0 | 3 | 2 | 0 | — |
 | 2026-10-31 | carousel | Practice & Clinic | Maintaining causes | 6ae56202b84259308bb6e1ac | — (pre-UTM) | 58 | 8 | 0 | 4 | 4 | 0 | — |
 | 2026-11-01 | carousel | Organon & History | Six editions of the Organon | 6ae6b3aaf0984eef3345d7a9 | — (pre-UTM) | 77 | 9 | 0 | 5 | 3 | 0 | — |
+| 2026-11-02 | carousel | Materia Medica | Pulsatilla vs Sepia | 6ae805a3083019e0c99d335b | — (pre-UTM) | 64 | 8 | 0 | 5 | 4 | 0 | — |

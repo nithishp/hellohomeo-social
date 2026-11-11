@@ -41,3 +41,6 @@ Website clicks are measured only by UTM links in Google Analytics. Instagram "pr
 | 2026-11-01 | carousel | Organon & History | Six editions of the Organon | 6ae6b3aaf0984eef3345d7a9 | — (pre-UTM) | 77 | 9 | 0 | 5 | 3 | 0 | — |
 | 2026-11-02 | carousel | Materia Medica | Pulsatilla vs Sepia | 6ae805a3083019e0c99d335b | — (pre-UTM) | 64 | 8 | 0 | 5 | 4 | 0 | — |
 | 2026-11-03 | carousel | Pharmacy 101 | Vehicles: what's inside a globule | 6ae9568694b13c6dd7923398 | — (pre-UTM) | 52 | 5 | 0 | 4 | 4 | 0 | — |
+| 2026-11-04 | carousel | Clinical Reference (quiz) | Guess the remedy: Lycopodium | 6aea26cb4132b75c1ecc6f9d | 2026-11-04-guess-the-remedy-lycopodium | 23 | 6 | 0 | 1 | 1 | 0 | — |
+| 2026-11-04 | story | Carousel teaser | Lycopodium quiz teaser | 6aea26cd02521ecbfd8fa721 | 2026-11-04-guess-the-remedy-lycopodium | 31 | 3 | 0 | — | — | — | — |
+| 2026-11-04 | reel | Reel: repertory → prescription | Rubrics to remedy. One screen. (published early, 15:31 IST; avg watch 3.3 s of 30 s) | 6aea2fa281bf336f27206cae | 2026-11-07-repertory-to-prescription | 216 | 11 | 1 | 5 | 5 | — | — |

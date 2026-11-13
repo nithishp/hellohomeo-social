@@ -45,3 +45,5 @@ Website clicks are measured only by UTM links in Google Analytics. Instagram "pr
 | 2026-11-04 | story | Carousel teaser | Lycopodium quiz teaser | 6aea26cd02521ecbfd8fa721 | 2026-11-04-guess-the-remedy-lycopodium | 31 | 3 | 0 | — | — | — | — |
 | 2026-11-04 | reel | Reel: repertory → prescription | Rubrics to remedy. One screen. (published early, 15:31 IST; avg watch 3.3 s of 30 s) | 6aea2fa281bf336f27206cae | 2026-11-07-repertory-to-prescription | 216 | 11 | 1 | 5 | 5 | — | — |
 | 2026-11-05 | story | Sourced tip (a) | Chronic case: ask about their life (Organon §208) | 6aebf976ff03f6944a1febde | 2026-11-05-tip-organon-208 | 25 | 1 | 0 | — | — | — | — |
+| 2026-11-06 | carousel | Clinic in Action | Weekly pharmacy stock check | 6aed4bac07f945cca93ac9f1 | 2026-11-06-weekly-stock-check | 67 | 7 | 0 | 4 | 3 | 0 | — |
+| 2026-11-06 | story | Carousel teaser | Weekly stock check teaser | 6aed4bb2f3498efda768edc2 | 2026-11-06-weekly-stock-check | 30 | 0 | 0 | — | — | — | — |

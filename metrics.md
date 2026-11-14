@@ -47,3 +47,4 @@ Website clicks are measured only by UTM links in Google Analytics. Instagram "pr
 | 2026-11-05 | story | Sourced tip (a) | Chronic case: ask about their life (Organon §208) | 6aebf976ff03f6944a1febde | 2026-11-05-tip-organon-208 | 25 | 1 | 0 | — | — | — | — |
 | 2026-11-06 | carousel | Clinic in Action | Weekly pharmacy stock check | 6aed4bac07f945cca93ac9f1 | 2026-11-06-weekly-stock-check | 67 | 7 | 0 | 4 | 3 | 0 | — |
 | 2026-11-06 | story | Carousel teaser | Weekly stock check teaser | 6aed4bb2f3498efda768edc2 | 2026-11-06-weekly-stock-check | 30 | 0 | 0 | — | — | — | — |
+| 2026-11-07 | story | Reel teaser | Repertory → prescription reel teaser | 6aee9c88d6bbae6fa161cc5f | 2026-11-07-repertory-to-prescription | 33 | 1 | 0 | — | — | — | — |

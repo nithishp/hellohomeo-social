@@ -1,0 +1,245 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<style>
+@font-face{font-family:Inter;font-weight:600;src:url(fonts/inter-latin-600-normal.woff2)}
+@font-face{font-family:Inter;font-weight:700;src:url(fonts/inter-latin-700-normal.woff2)}
+@font-face{font-family:Inter;font-weight:800;src:url(fonts/inter-latin-800-normal.woff2)}
+@font-face{font-family:Poppins;font-weight:400;src:url(fonts/poppins-latin-400-normal.woff2)}
+@font-face{font-family:Poppins;font-weight:500;src:url(fonts/poppins-latin-500-normal.woff2)}
+@font-face{font-family:Poppins;font-weight:600;src:url(fonts/poppins-latin-600-normal.woff2)}
+@font-face{font-family:Poppins;font-style:italic;font-weight:400;src:url(fonts/poppins-latin-400-italic.woff2)}
+@font-face{font-family:Deva;font-weight:400;src:url(fonts/noto-sans-devanagari-devanagari-400-normal.woff2)}
+@font-face{font-family:Deva;font-weight:500;src:url(fonts/noto-sans-devanagari-devanagari-500-normal.woff2)}
+:root{--ink:#070C1F;--jade:#10B880;--jd:#06805A;--jod:#5FD6AC;--tint:#E8F8F1;--line:#CDEFE0;--muted:#6A7385;--txt:#0B1220}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1080px;height:1920px;overflow:hidden;background:transparent}
+body{font-family:Poppins;color:#fff;position:relative}
+#bg{position:absolute;inset:0;background:var(--ink);overflow:hidden}
+#ghost{position:absolute;left:150px;width:860px;height:900px;top:420px;border-radius:40px;background:rgba(95,214,172,.05);border:2px solid rgba(95,214,172,.10)}
+#dots{position:absolute;left:-200px;top:-200px;width:1480px;height:2400px;background-image:radial-gradient(rgba(95,214,172,.10) 2px,transparent 2.5px);background-size:48px 48px}
+#shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(7,12,31,.92) 0%,rgba(7,12,31,.6) 20%,rgba(7,12,31,0) 36%,rgba(7,12,31,0) 58%,rgba(7,12,31,.78) 76%,rgba(7,12,31,.92) 100%);opacity:0}
+.scene{position:absolute;inset:0;opacity:0}
+.head{position:absolute;left:72px;right:72px;top:250px;font-family:Inter;font-weight:800;font-size:88px;line-height:1.04;letter-spacing:-2.5px}
+.head .a{color:var(--jade)}
+.card{position:absolute;left:72px;width:936px;background:#fff;border-radius:32px;color:var(--txt);box-shadow:0 40px 80px -45px rgba(8,58,44,.45),0 0 0 2px rgba(16,184,128,.18);overflow:hidden}
+.ctop{display:flex;align-items:center;gap:16px;padding:26px 32px 22px;border-bottom:2px solid #EEF1F6}
+.ico{width:56px;height:56px;border-radius:16px;background:var(--tint);display:flex;align-items:center;justify-content:center;color:var(--jd);flex:none}
+.ico svg{width:32px;height:32px}
+.ctitle{font-family:Inter;font-weight:700;font-size:44px;flex:1}
+.pill{font-size:27px;font-weight:600;color:var(--jd);background:var(--tint);border:2px solid #9fe3c8;border-radius:999px;padding:6px 20px;white-space:nowrap}
+.pill.off{color:#B45309;background:#FFF7ED;border-color:#FED7AA}
+/* fields */
+.fields{padding:18px 26px 18px}
+.fld{border:2px solid #E6EAF1;border-radius:20px;padding:14px 22px;margin-bottom:12px;position:relative;background:#fff}
+.fld.new{border-color:#9fe3c8;background:#F3FBF7}
+.fl{font-size:27px;font-weight:600;letter-spacing:1.6px;color:var(--muted);text-transform:uppercase}
+.fv{font-size:38px;line-height:1.26;margin-top:4px;color:var(--txt);min-height:46px}
+.jw{position:absolute;right:22px;top:16px;font-size:24px;font-weight:600;color:var(--jd)}
+.caret{display:inline-block;width:3px;height:38px;background:var(--jade);vertical-align:-6px;margin-left:2px}
+/* room */
+.room{padding:24px 30px 30px}
+.bub{border-radius:22px;padding:20px 26px;margin-bottom:18px;border:2px solid #E6EAF1;background:#fff}
+.bub.doc{background:#F3FBF7;border-color:#BFEBD9}
+.who{font-size:23px;font-weight:600;letter-spacing:1.6px;color:var(--muted)}
+.hi{font-family:Deva,Poppins;font-weight:500;font-size:44px;line-height:1.45;margin-top:4px;color:var(--txt)}
+.gl{font-style:italic;font-size:35px;line-height:1.35;color:var(--muted);margin-top:8px}
+.mic{display:flex;align-items:center;gap:12px;font-size:27px;color:var(--jd);font-weight:600;padding:0 36px 26px}
+.wave{display:flex;gap:6px;align-items:center;height:40px}
+.wave i{display:block;width:7px;border-radius:4px;background:var(--jade)}
+/* rep */
+.chips{display:flex;flex-wrap:wrap;gap:12px;padding:24px 30px 6px}
+.chip{font-size:30px;font-weight:500;color:var(--jd);background:var(--tint);border:2px solid #BFEBD9;border-radius:12px;padding:6px 16px}
+.board{position:relative;height:452px;margin:12px 30px 0}
+.rem{position:absolute;left:0;right:0;height:84px;display:flex;align-items:center;gap:18px}
+.rk{width:52px;height:52px;border-radius:14px;background:#EEF1F6;color:var(--muted);display:flex;align-items:center;justify-content:center;font-family:Inter;font-weight:700;font-size:28px;flex:none}
+.rem.top .rk{background:var(--jade);color:#fff}
+.rb{flex:1}
+.rn{display:flex;justify-content:space-between;align-items:baseline}
+.ab{font-weight:700;font-size:40px;font-family:Inter;letter-spacing:.5px}
+.cv{font-size:25px;color:var(--muted)}
+.bar{height:12px;border-radius:7px;background:#EEF1F6;margin-top:8px;overflow:hidden}
+.bar i{display:block;height:100%;border-radius:7px;background:#7DDBB7}
+.rem.top .bar i{background:linear-gradient(90deg,#10B880,#06805A)}
+.sc{width:70px;text-align:right;font-family:Inter;font-weight:700;font-size:36px;flex:none}
+.note{font-size:26px;line-height:1.35;color:var(--muted);padding:16px 32px 22px;border-top:2px solid #EEF1F6}
+/* send */
+.send{margin:4px 30px 30px;height:96px;border-radius:22px;background:linear-gradient(90deg,#12A874,#0B8F62);color:#fff;font-weight:600;font-size:36px;display:flex;align-items:center;justify-content:center;gap:14px}
+/* captions */
+#cap{position:absolute;left:72px;right:72px;top:1390px;display:flex;justify-content:center}
+#cap span{background:rgba(7,12,31,.80);border-radius:18px;padding:14px 26px;font-weight:500;font-size:40px;line-height:1.35;text-align:center;max-width:936px;color:#fff}
+#cap span b{color:var(--jod);font-weight:600}
+.kin{position:absolute;left:72px;right:72px;font-family:Inter;font-weight:800;font-size:104px;letter-spacing:-3px;line-height:1.02;text-shadow:0 4px 30px rgba(0,0,0,.55)}
+.cta{position:absolute;left:0;right:0;text-align:center}
+.tag{position:absolute;left:72px;top:250px;display:inline-flex;align-items:center;gap:12px;font-size:28px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--jod);border:2px solid rgba(95,214,172,.4);background:rgba(16,184,128,.10);border-radius:999px;padding:10px 24px}
+</style></head>
+<body>
+<div id="bg"><div id="dots"></div><div id="ghost"></div></div>
+<div id="shade"></div>
+
+<!-- Shared case-sheet card: hook, payoff 2, result, loop -->
+<div class="card" id="sheet" style="top:470px">
+  <div class="ctop"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M8 13h8M8 17h6"/></svg></div><div class="ctitle">Case sheet</div><div class="pill" id="fc">0 of 17 fields</div></div>
+  <div class="fields" id="fields"></div>
+  <div class="send" id="send" style="display:none"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4"><path d="m22 2-7 20-4-9-9-4z"/></svg><span id="sendt">Send to consultation</span></div>
+</div>
+
+<div class="scene" id="s-hook"><div class="head" id="hh">The case sheet<br><span class="a">writes itself.</span></div></div>
+<div id="hb" style="position:absolute;left:72px;right:72px;top:470px;opacity:0;border-radius:26px;padding:20px 28px;background:rgba(255,255,255,.07);border:2px solid rgba(95,214,172,.35)"><div style="font-size:24px;font-weight:600;letter-spacing:1.6px;color:#5FD6AC">PATIENT · हिन्दी</div><div style="font-family:Deva,Poppins;font-weight:500;font-size:44px;line-height:1.4;color:#fff">दाहिनी तरफ़, कनपटी के पास। ऐसा लगता है जैसे कोई हथौड़े से मार रहा हो।</div></div>
+
+<div class="scene" id="s-a">
+  <div class="kin" id="k1" style="top:300px">Eyes on the keyboard.</div>
+  <div class="kin" id="k2" style="top:600px;color:var(--jod)">Not the patient.</div>
+</div>
+
+<div class="scene" id="s-p1">
+  <div class="head" id="h1">Just talk.<br><span class="a">In their language.</span></div>
+  <div class="card" id="room" style="top:520px">
+    <div class="ctop"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="9" y="2" width="6" height="12" rx="3"/><path d="M5 10a7 7 0 0 0 14 0M12 17v5"/></svg></div><div class="ctitle">The room</div><div class="pill">हिन्दी · Hindi</div></div>
+    <div class="room">
+      <div class="bub doc" id="b1"><div class="who">DOCTOR</div><div class="hi">किस समय ज़्यादा बढ़ता है?</div><div class="gl">When does it get worse?</div></div>
+      <div class="bub" id="b2"><div class="who">PATIENT</div><div class="hi" id="b2h"></div><div class="gl" id="b2g">It worsens as soon as I go out in the sun. And if I stay hungry too long it gets even worse.</div></div>
+    </div>
+    <div class="mic"><div class="wave" id="wave"></div>Listening</div>
+  </div>
+</div>
+
+<div class="scene" id="s-p2"><div class="head" id="h2">Written in<br><span class="a">clinical English.</span></div></div>
+
+<div class="scene" id="s-p3">
+  <div class="head" id="h3">Every symptom,<br><span class="a">a rubric.</span></div>
+  <div class="card" id="rep" style="top:466px">
+    <div class="ctop"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div><div class="ctitle">Live repertorisation</div><div class="pill" id="rc">8 rubrics</div></div>
+    <div class="chips" id="chips"></div>
+    <div class="board" id="board"></div>
+    <div class="note">A starting point for your own reading of the case, not a prescription.</div>
+  </div>
+</div>
+
+<div class="scene" id="s-res">
+  <div class="tag" id="t1"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg>You review every field</div>
+  <div class="kin" id="k3" style="top:360px">Eyes on<br><span style="color:var(--jod)">your patient.</span></div>
+</div>
+
+<div class="scene" id="s-cta">
+  <div class="cta" id="c1" style="top:400px"><div id="clogo" style="width:200px;height:200px;margin:0 auto"></div></div>
+  <div class="cta" id="c2" style="top:640px;font-family:Inter;font-weight:800;font-size:110px;letter-spacing:-3px">HelloHomeo</div>
+  <div class="cta" id="c3" style="top:790px;font-family:Inter;font-weight:700;font-size:64px;color:var(--jade)">hellohomeo.in</div>
+  <div class="cta" id="c4" style="top:930px"><span style="display:inline-block;border:3px solid var(--jade);border-radius:24px;padding:22px 40px;font-family:Inter;font-weight:800;font-size:58px;letter-spacing:-1px">30-day free trial</span>
+    <div style="font-size:40px;color:rgba(255,255,255,.82);margin-top:24px">Full access to all features.</div></div>
+</div>
+
+<div id="cap"><span id="capt"></span></div>
+
+<script>
+const $=id=>document.getElementById(id);
+const cl=(x,a=0,b=1)=>Math.min(b,Math.max(a,x));
+const quint=x=>1-Math.pow(1-cl(x),5);
+const cubicIO=x=>{x=cl(x);return x<.5?4*x*x*x:1-Math.pow(-2*x+2,3)/2};
+const back=x=>{x=cl(x);const c1=1.4,c3=c1+1;return 1+c3*Math.pow(x-1,3)+c1*Math.pow(x-1,2)};
+const inC=x=>Math.pow(cl(x),3);
+function set(el,o,y=0,s=1,x=0){el.style.opacity=o;el.style.transform=`translate(${x}px,${y}px) scale(${s})`}
+fetch('logo-dark.svg').then(r=>r.text()).then(s=>{$('clogo').innerHTML=s.replace('<svg','<svg width="200" height="200"')});
+
+// ---- data (from lib/vita-demo-script.js, Hindi chronic demo; and live capture 2026-11-14) ----
+const F=[ // label, value
+ ['Chief complaints','Severe headache of eight months’ duration.'],
+ ['Location','Right-sided, localised to the temporal region.'],
+ ['Sensation','Throbbing, hammering pain.'],
+ ['Modalities','Aggravated by sun exposure and by fasting or delayed meals.'],
+];
+$('fields').innerHTML=F.map((f,i)=>`<div class="fld" id="fd${i}"><div class="fl">${f[0]}</div><div class="fv" id="fv${i}"></div><div class="jw" id="jw${i}">✓ just written</div></div>`).join('');
+const HI='धूप में निकलते ही बढ़ जाता है। और अगर देर तक भूखी रहूँ तो और भी बुरा हो जाता है।';
+$('wave').innerHTML=Array.from({length:14},()=>'<i></i>').join('');
+const CH=['head pain right side','head pain hammering','head pain sun agg','thirst large quantities','grief silent','ailments from grief'];
+$('chips').innerHTML=CH.map((c,i)=>`<span class="chip" id="ch${i}">${c}</span>`).join('');
+// remedy board: state A (8 rubrics, live capture 0:30) -> state B (14 rubrics, capture end)
+const RA={'nat-m':[1,8,18,100],'sang':[2,6,14,75],'bell':[3,4,11,50],'glon':[4,3,8,38],'ign':[6,1,2,13]};
+const RB={'nat-m':[1,14,36,100],'sang':[2,6,14,43],'bell':[3,4,11,29],'ign':[4,4,10,29],'glon':[5,3,8,21]};
+const NAMES=['nat-m','sang','bell','ign','glon'];
+$('board').innerHTML=NAMES.map(n=>`<div class="rem" id="r_${n}"><div class="rk"></div><div class="rb"><div class="rn"><span class="ab">${n}</span><span class="cv"></span></div><div class="bar"><i></i></div></div><div class="sc"></div></div>`).join('');
+
+// ---- timeline ----
+const S={hook:[0,2.0],a:[2.0,5.6],p1:[5.6,9.9],p2:[9.9,14.4],p3:[14.4,19.0],res:[19.0,23.2],cta:[23.2,30.0]};
+const RES_CUT=20.3; // match cut: send button -> clip B
+const CAPS=[[2.05,3.61,'Your patient is talking\u2026'],[3.62,5.45,'\u2026and your eyes are on the keyboard.'],[5.75,6.91,'Now, just talk.'],[6.92,9.88,'In Hindi, Tamil, any language your patient speaks.'],[10.02,13.08,'<b>Scribe AI</b> writes the case sheet in clinical English.'],[13.10,14.93,'Only what was actually said.'],[14.95,18.85,'Each symptom becomes a rubric, and the remedies re-rank live.'],[19.30,21.9,'Diagnosis and prescription stay yours.'],[23.40,24.25,'<b>HelloHomeo.</b>'],[24.32,27.6,'30-day free trial, with full access to all features.'],[27.66,29.0,'<b>hellohomeo.in</b>']];
+const inS=(t,k)=>t>=S[k][0]&&t<S[k][1];
+const loc=(t,k)=>t-S[k][0];
+
+// field i fill progress p in [0,1]: chars typed
+function fields(state){ // state: array of progress per field (0..1), newIdx
+  let n=0;
+  F.forEach((f,i)=>{ const p=cl(state[i]||0); const el=$('fv'+i); const k=Math.round(p*f[1].length);
+    el.innerHTML=f[1].slice(0,k)+(p>0&&p<1?'<span class="caret"></span>':'');
+    const fd=$('fd'+i); fd.style.display=p>0?'block':'none'; if(p>0) n++;
+    const just=p>=1&&state.just===i; fd.classList.toggle('new',p>0&&p<1||just); $('jw'+i).style.opacity=just?1:0; });
+  return n;
+}
+function board(m){ // m in [0,1] morph A->B
+  NAMES.forEach(n=>{ const a=RA[n],b=RB[n]; const e=cubicIO(m); const el=$('r_'+n);
+    const rank=a[0]+(b[0]-a[0])*e; el.style.top=((rank-1)*90)+'px';
+    const rr=m<0.5?a[0]:b[0]; el.classList.toggle('top',rr===1); el.querySelector('.rk').textContent=rr;
+    const cov=m<0.5?a[1]:b[1], tot=m<0.5?8:14; el.querySelector('.cv').textContent=`${cov}/${tot} · ${m<0.5?a[3]:b[3]}%`;
+    el.querySelector('.sc').textContent=Math.round(a[2]+(b[2]-a[2])*e);
+    el.querySelector('.bar i').style.width=(a[3]+(b[3]-a[3])*e)+'%';
+    el.style.opacity=(n==='ign'&&m<0.02)?0.0:1; });
+  $('rc').textContent=(m<0.5?8:14)+' rubrics';
+}
+window.seek=function(t){
+  const clipA=inS(t,'a'), clipB=t>=RES_CUT&&t<S.res[1];
+  $('bg').style.opacity=(clipA||clipB)?0:1; $('shade').style.opacity=(clipA||clipB)?1:0;
+  $('dots').style.transform=`translateY(${-(t%30)*16}px)`; $('ghost').style.transform=`translate(${Math.sin(t*0.6)*14}px,${-40+Math.cos(t*0.5)*18}px) rotate(-3deg)`;
+  ['s-hook','s-a','s-p1','s-p2','s-p3','s-res','s-cta'].forEach(id=>$(id).style.opacity=0);
+  const sh=$('sheet'); sh.style.opacity=0; $('hb').style.opacity=0; $('send').style.display='none';
+  const hookState=l=>{ // l: 0..2 -> fields filling fast, frame 0 already acting
+    const st=[1, cl((l+0.35)/0.7), cl((l-0.35)/0.6), cl((l-0.95)/0.75)]; st.just=l>1.7?3:(l>0.95?2:(l>0.35?1:0)); return st; };
+  // HOOK
+  if(inS(t,'hook')){ const l=loc(t,'hook'); $('s-hook').style.opacity=1; sh.style.top='700px'; set(sh,1,0,1); $('hb').style.opacity=1;
+    const n=fields(hookState(l)); $('fc').textContent=`${n+1} of 17 fields`;
+    if(l>1.72){ const e=inC((l-1.72)/0.28); set(sh,1-e,-60*e); $('s-hook').style.opacity=1-e; $('hb').style.opacity=1-e; } }
+  // CLIP A (pain)
+  if(clipA){ const l=loc(t,'a'); $('s-a').style.opacity=1;
+    const e1=quint((l-0.1)/0.5); set($('k1'),e1,40*(1-e1)); const e2=quint((l-1.75)/0.5); set($('k2'),e2,40*(1-e2));
+    if(l>3.35){ $('s-a').style.opacity=1-inC((l-3.35)/0.25); } }
+  // P1 room
+  if(inS(t,'p1')){ const l=loc(t,'p1'); $('s-p1').style.opacity=1;
+    const e=quint(l/0.6); set($('room'),e,140*(1-e),.98+.02*e); const eh=quint((l-0.1)/0.5); set($('h1'),eh,30*(1-eh));
+    const b1=quint((l-0.15)/0.4); set($('b1'),b1,30*(1-b1));
+    const b2=quint((l-0.6)/0.4); set($('b2'),b2,30*(1-b2));
+    const k=Math.round(cl((l-0.7)/1.6)*HI.length); $('b2h').textContent=HI.slice(0,k);
+    const g=quint((l-2.4)/0.5); $('b2g').style.opacity=g;
+    document.querySelectorAll('#wave i').forEach((w,i)=>{ const a=l<2.4?1:0.25; w.style.height=(8+a*28*Math.abs(Math.sin(l*9+i*1.3)))+'px'; });
+    // match cut: gloss flies down into Modalities field
+    if(l>3.75){ const x=inC((l-3.75)/0.55); $('h1').style.opacity=1-x; $('b1').style.opacity=1-x; $('room').style.transform=`translateY(${x*40}px)`; $('room').style.opacity=1-x; } }
+  // P2 case sheet fills
+  if(inS(t,'p2')){ const l=loc(t,'p2'); $('s-p2').style.opacity=1; sh.style.opacity=1; sh.style.top='520px';
+    const e=quint(l/0.55); sh.style.transform=`translateY(${(1-e)*120}px)`;
+    const eh=quint((l-0.1)/0.5); set($('h2'),eh,30*(1-eh));
+    const st=[1,cl((l-0.2)/0.7),cl((l-1.0)/0.6),cl((l-1.7)/1.1)]; st.just=l>2.8?3:(l>1.7?2:1);
+    const n=fields(st); $('fc').textContent=`${n+1} of 17 fields`;
+    if(l>4.15){ const x=inC((l-4.15)/0.35); sh.style.opacity=1-x; $('s-p2').style.opacity=1-x; } }
+  // P3 live repertorisation
+  if(inS(t,'p3')){ const l=loc(t,'p3'); $('s-p3').style.opacity=1;
+    const e=quint(l/0.6); set($('rep'),e,140*(1-e),.98+.02*e); const eh=quint((l-0.1)/0.5); set($('h3'),eh,30*(1-eh));
+    CH.forEach((c,i)=>{ const at=i<3?0.25+i*0.08:1.4+(i-3)*0.4; const q=back((l-at)/0.35); const el=$('ch'+i); el.style.opacity=cl((l-at)/0.15); el.style.transform=`scale(${0.6+0.4*q})`; });
+    board(cl((l-1.6)/1.6));
+    if(l>4.3){ $('s-p3').style.opacity=1-inC((l-4.3)/0.3); } }
+  // RESULT: finished sheet + send (19.0-20.3) then clip B
+  if(inS(t,'res')){ const l=loc(t,'res');
+    if(t<RES_CUT){ sh.style.opacity=1; sh.style.top='520px'; $('send').style.display='flex'; const e=quint(l/0.45); sh.style.transformOrigin='50% 0'; set(sh,e,80*(1-e),0.88);
+      const st=[1,1,1,1]; st.just=-1; fields(st); $('fc').textContent='13 of 17 fields';
+      const pr=l>0.7; $('sendt').textContent=pr?'Sent to consultation':'Send to consultation';
+      $('send').style.transform=`scale(${pr?0.94+0.06*back((l-0.7)/0.3):1})`;
+      if(l>1.05){ const x=inC((l-1.05)/0.25); sh.style.opacity=1-x; sh.style.transform=`scale(${0.88+0.04*x})`; } }
+    else { const m=t-RES_CUT; $('s-res').style.opacity=1; const q=quint((m-0.15)/0.5); set($('k3'),q,40*(1-q)); const r=quint((m-0.9)/0.5); set($('t1'),r,20*(1-r));
+      if(m>2.6){ $('s-res').style.opacity=1-inC((m-2.6)/0.3); } } }
+  // CTA + loop back to hook
+  if(inS(t,'cta')||t>=30){ const l=Math.min(loc(t,'cta'),6.799); $('s-cta').style.opacity=1;
+    ['c1','c2','c3','c4'].forEach((id,i)=>{const q=quint((l-0.1-i*0.18)/0.6); set($(id),q,60*(1-q));});
+    if(l>5.9){ const x=inC((l-5.9)/0.35); ['c1','c2','c3','c4'].forEach(id=>{$(id).style.opacity=1-x; $(id).style.transform=`translateY(${-80*x}px)`;});
+      const e=quint((l-6.05)/0.75); sh.style.top='700px'; $('hb').style.opacity=quint((l-6.2)/0.6); set(sh,e,(1-e)*700); const n=fields(hookState(0)); $('fc').textContent=`${n+1} of 17 fields`;
+      $('s-hook').style.opacity=quint((l-6.25)/0.55); } }
+  const c=CAPS.find(c=>t>=c[0]&&t<c[1]); $('capt').innerHTML=c?c[2]:''; $('capt').style.display=c?'inline-block':'none';
+};
+window.ready=document.fonts.ready.then(()=>Promise.all([...document.fonts].map(f=>f.load().catch(()=>0)))).then(()=>new Promise(r=>setTimeout(r,400)));
+</script>
+</body></html>

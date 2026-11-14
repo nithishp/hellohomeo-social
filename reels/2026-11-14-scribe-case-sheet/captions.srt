@@ -1,0 +1,43 @@
+1
+00:00:02,050 --> 00:00:03,610
+Your patient is talking…
+
+2
+00:00:03,620 --> 00:00:05,450
+…and your eyes are on the keyboard.
+
+3
+00:00:05,750 --> 00:00:06,910
+Now, just talk.
+
+4
+00:00:06,920 --> 00:00:09,880
+In Hindi, Tamil, any language your patient speaks.
+
+5
+00:00:10,020 --> 00:00:13,080
+Scribe AI writes the case sheet in clinical English.
+
+6
+00:00:13,100 --> 00:00:14,930
+Only what was actually said.
+
+7
+00:00:14,950 --> 00:00:18,850
+Each symptom becomes a rubric, and the remedies re-rank live.
+
+8
+00:00:19,300 --> 00:00:21,900
+Diagnosis and prescription stay yours.
+
+9
+00:00:23,400 --> 00:00:24,250
+HelloHomeo.
+
+10
+00:00:24,320 --> 00:00:27,600
+30-day free trial, with full access to all features.
+
+11
+00:00:27,660 --> 00:00:29,000
+hellohomeo.in

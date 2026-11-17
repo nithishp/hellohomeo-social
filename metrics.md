@@ -54,3 +54,4 @@ Website clicks are measured only by UTM links in Google Analytics. Instagram "pr
 | 2026-11-08 | story | This or that (b) | Consolation aggravates: Pulsatilla or Natrum mur? | 6aefee1b229bf05daf8afc53 | 2026-11-08-this-or-that-consolation | 30 | 1 | 0 | — | — | — | — |
 | 2026-11-09 | carousel | Practice & Compliance | Patient data under the DPDP Act 2023 | 6af13fdde44ddbb57c2d1c72 | 2026-11-09-patient-data-dpdp-act | 68 | 9 | 0 | 4 | 3 | 0 | — |
 | 2026-11-09 | story | Carousel teaser | DPDP patient-data teaser | 6af13fdfcac9d7525f66e3b3 | 2026-11-09-patient-data-dpdp-act | 28 | 2 | 0 | — | — | — | — |
+| 2026-11-10 | story | Product moment (c) | Dispensing Pricing: set prices once | 6af29149b59b34913a52a373 | 2026-11-10-dispensing-pricing | 32 | 0 | 0 | — | — | — | — |

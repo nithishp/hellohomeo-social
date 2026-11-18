@@ -55,3 +55,5 @@ Website clicks are measured only by UTM links in Google Analytics. Instagram "pr
 | 2026-11-09 | carousel | Practice & Compliance | Patient data under the DPDP Act 2023 | 6af13fdde44ddbb57c2d1c72 | 2026-11-09-patient-data-dpdp-act | 68 | 9 | 0 | 4 | 3 | 0 | — |
 | 2026-11-09 | story | Carousel teaser | DPDP patient-data teaser | 6af13fdfcac9d7525f66e3b3 | 2026-11-09-patient-data-dpdp-act | 28 | 2 | 0 | — | — | — | — |
 | 2026-11-10 | story | Product moment (c) | Dispensing Pricing: set prices once | 6af29149b59b34913a52a373 | 2026-11-10-dispensing-pricing | 32 | 0 | 0 | — | — | — | — |
+| 2026-11-11 | carousel | Clinical Reference (Organon in clinic) | One-sided cases | 6af3e2cdffe2872794edfd9b | 2026-11-11-one-sided-cases | 20 | 6 | 0 | 3 | 1 | 0 | — |
+| 2026-11-11 | story | Carousel teaser | One-sided cases teaser | 6af3e2d15e53322cd57b6742 | 2026-11-11-one-sided-cases | 37 | 0 | 0 | — | — | — | — |

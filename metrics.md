@@ -58,3 +58,5 @@ Website clicks are measured only by UTM links in Google Analytics. Instagram "pr
 | 2026-11-11 | carousel | Clinical Reference (Organon in clinic) | One-sided cases | 6af3e2cdffe2872794edfd9b | 2026-11-11-one-sided-cases | 20 | 6 | 0 | 3 | 1 | 0 | — |
 | 2026-11-11 | story | Carousel teaser | One-sided cases teaser | 6af3e2d15e53322cd57b6742 | 2026-11-11-one-sided-cases | 37 | 0 | 0 | — | — | — | — |
 | 2026-11-12 | story | Sourced tip (a) | One single, simple medicine at a time (Organon §273) | 6af535953d8c751bfd11c844 | 2026-11-12-tip-organon-273 | 34 | 4 | 0 | — | — | — | — |
+| 2026-11-13 | carousel | Clinic in Action | Follow-ups: book before they leave | 6af685f9fb90ccefdd17ea9a | 2026-11-13-follow-ups-book-before-they-leave | 14 | 3 | 0 | 0 | 0 | 0 | — |
+| 2026-11-13 | story | Carousel teaser | Follow-ups teaser | 6af685fb5ec1c9d5be58e46f | 2026-11-13-follow-ups-book-before-they-leave | 20 | 0 | 0 | — | — | — | — |

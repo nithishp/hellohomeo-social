@@ -60,3 +60,5 @@ Website clicks are measured only by UTM links in Google Analytics. Instagram "pr
 | 2026-11-12 | story | Sourced tip (a) | One single, simple medicine at a time (Organon §273) | 6af535953d8c751bfd11c844 | 2026-11-12-tip-organon-273 | 34 | 4 | 0 | — | — | — | — |
 | 2026-11-13 | carousel | Clinic in Action | Follow-ups: book before they leave | 6af685f9fb90ccefdd17ea9a | 2026-11-13-follow-ups-book-before-they-leave | 14 | 3 | 0 | 0 | 0 | 0 | — |
 | 2026-11-13 | story | Carousel teaser | Follow-ups teaser | 6af685fb5ec1c9d5be58e46f | 2026-11-13-follow-ups-book-before-they-leave | 20 | 0 | 0 | — | — | — | — |
+| 2026-11-14 | reel | Reel: Scribe AI case sheet | The case sheet writes itself (avg watch 3.0 s of 30 s; 289 views) | 6af7dbb6bb36d00909e6a217 | 2026-11-14-scribe-case-sheet | 211 | 8 | 0 | 6 | 4 | — | — |
+| 2026-11-14 | story | Reel teaser | Scribe reel teaser | 6af7dbbb4b28296eb1324c81 | 2026-11-14-scribe-case-sheet | 20 | 0 | 0 | — | — | — | — |

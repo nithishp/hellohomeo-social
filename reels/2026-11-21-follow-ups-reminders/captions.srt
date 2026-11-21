@@ -1,0 +1,35 @@
+1
+00:00:00,120 --> 00:00:02,200
+Book the follow-up before they leave.
+
+2
+00:00:02,900 --> 00:00:05,650
+Not with a register and a phone, every evening.
+
+3
+00:00:07,300 --> 00:00:10,600
+In HelloHomeo, schedule it right from the consultation.
+
+4
+00:00:11,600 --> 00:00:15,200
+They get a WhatsApp reminder a day before, and an hour before.
+
+5
+00:00:15,600 --> 00:00:16,400
+Need another day?
+
+6
+00:00:16,500 --> 00:00:18,100
+They reschedule on WhatsApp.
+
+7
+00:00:19,400 --> 00:00:20,350
+Less chasing.
+
+8
+00:00:22,200 --> 00:00:23,200
+Home on time.
+
+9
+00:00:25,350 --> 00:00:28,800
+Try it free for 30 days at hellohomeo.in

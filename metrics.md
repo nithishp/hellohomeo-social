@@ -1,36 +1,33 @@
 # Metrics
 
 ## This week's read
-_Updated Sun 2026-11-15 · window 2026-10-18 to 2026-11-14 (4 weeks) · Buffer per-post stats, so posts from the last 3–4 days are still climbing._
+_Updated Sun 2026-11-22 · window 2026-10-25 to 2026-11-21 (4 weeks; posts in the table below plus Buffer's latest per-post stats for 11-15 to 11-21) · carousels from 11-16 to 11-20 are 2–6 days old, and the 11-21 reel has no stats yet._
 
-**Follows:** still only 1 follow attributed in Buffer across 49 posts (Nux vomica quiz carousel, 10-21). Buffer gives 0 for every other carousel and no figure for reels or stories, so follows per post can't be ranked. Owner: fill follows from Instagram (post → View insights → Follows) for reels 6aea2fa281bf336f27206cae and 6af7dbb6bb36d00909e6a217 and story 6aefee1b229bf05daf8afc53.
+**Follows:** Buffer still shows 0 follows for every carousel in the window and gives no figure for reels or stories, so follows per post still can't be ranked. Owner: fill follows from Instagram (post → View insights → Follows) for reels 6aea2fa281bf336f27206cae, 6af7dbb6bb36d00909e6a217 and 6b011579d9cbb430a118d079, and for stories 6aefee1b229bf05daf8afc53 and 6af9289eb9a106584c85a16c.
 
 **By type (per post):**
 | type | posts | reach | likes | saves | shares | follows |
 |---|---|---|---|---|---|---|
-| reel | 3 (2 by this routine, 1 owner-posted) | 172 | 9.7 | 5.3 | 5.7 | — |
-| carousel | 22 | 52 | 7.5 | 2.9 | 2.4 | 1 total |
-| story | 24 | 28 | 0.9 | n/a | n/a | — |
+| reel (routine) | 2 with stats (11-04, 11-14) | 214 | 9.5 | 5.5 | 4.5 | — |
+| carousel | 16 | 41 | 6.3 | 2.3 | 2.1 | 0 |
+| story | 17 (11-21 excluded, still partial) | 29 | 0.6 | n/a | n/a | — |
 
-**Carousels by series (per post; most series have only 1–3 posts, so treat as directional):**
+**Carousels by series since the new calendar (11-04 onward):**
 | series | posts | reach | saves | shares |
 |---|---|---|---|---|
-| Organon & History (old daily series) | 3 | 86 | 3.7 | 2.7 |
-| Practice & Clinic + Practice & Compliance | 3 | 65 | 3.3 | 3.3 |
-| Pharmacy 101 | 3 | 59 | 4.0 | 4.0 |
-| Materia Medica remedy pairs | 3 | 56 | 5.0 | 2.3 |
-| Repertory & Case-taking | 2 | 47 | 0.5 | 2.0 |
-| Clinic in Action | 2 | 39 | 2.5 | 1.5 |
-| Myth vs Fact | 2 | 37 | 2.0 | 1.0 |
-| Guess-the-remedy quizzes | 3 | 32 | 1.0 | 1.7 |
-| Clinical Reference: Organon in clinic | 1 | 15 (2 days old) | 2.0 | 1.0 |
+| Practice & Compliance | 2 (DPDP 68; rates display 12) | 40 | 2.0 | 1.5 |
+| Clinic in Action | 3 (stock check 67; follow-ups 14; prescriptions 10) | 30 | 1.3 | 1.0 |
+| Clinical Reference | 3 (Lycopodium quiz 23; one-sided cases 20; Hepar vs Silicea 19) | 21 | 1.7 | 0.3 |
+Every series has 3 or fewer posts, so this ranks nothing yet.
 
-**Best:** owner-posted reel 10-31 (reach 275, 9 shares); among carousels, "Why not give both, just to be safe?" (Organon, 10-25, reach 133) and "Why succussion, not just dilution" (10-27, reach 85, 5 shares). Reel 11-04 (repertory → prescription) reached 216.
-**Worst:** "Come back if needed loses follow-ups" (Clinic in Action, 11-13): reach 9 after 2 days; "One-sided cases" (11-11): reach 15. Both are young, but they are tracking well below the DPDP carousel (66) at the same age band.
+**Stories by type:** teasers 10 posts, 29 reach; sourced tips 3 posts, 31; this-or-that 2 posts, 27; product moments 2 posts, 30. Flat across types.
 
-**Watch:** this week's carousel reach fell from 66 (Mon) to 15 (Wed) to 9 (Fri), and the 11-14 Scribe reel is at 24 after a day. Recheck these on 11-18/11-20 before reading it as a trend.
+**Best:** reel 11-04, repertory → prescription (reach 216), then reel 11-14, Scribe case sheet (211, 6 saves). Best carousel: "Why succussion, not just dilution" (10-27, reach 82, 5 shares).
+**Worst:** "Sulph 30, TDS" prescription carousel (11-20, reach 10 at 2 days) and the Clinical Establishments rates-display carousel (11-16, reach 12 at 6 days).
 
-**Do more of:** reels (about 3× carousel reach and the most shares). For carousels, the Practice & Compliance angle (DPDP, 66 reach, 4 saves) and remedy pairs (most saves) beat quizzes and the product-led Clinic in Action posts; keep Clinic in Action workflow-first with the product as a single late slide. Stories hold steady at ~28 reach; keep them light.
+**Watch, the main signal this week:** feed carousel reach has fallen hard. The last 5 carousels reached 20, 14, 12, 19 and 10, against 52–82 for most carousels in late October and early November. The fall hits every series, so it isn't a topic problem. Over the same weeks stories held at about 29 and reels at about 210, so the account still reaches people. Carousels just aren't being pushed beyond existing followers.
+
+**Do more of:** reels. They reach about 5× what a carousel does and bring the most saves and shares. For carousels, the old Pharmacy 101 and remedy-pair posts drew the most saves; bring that pharmacy/label-decoder angle back into Clinical Reference. Recheck the carousel drop on 11-29 before changing the calendar.
 
 Website clicks are measured only by UTM links in Google Analytics. Instagram "profile link taps" are not website clicks.
 
@@ -62,3 +59,4 @@ Website clicks are measured only by UTM links in Google Analytics. Instagram "pr
 | 2026-11-13 | story | Carousel teaser | Follow-ups teaser | 6af685fb5ec1c9d5be58e46f | 2026-11-13-follow-ups-book-before-they-leave | 20 | 0 | 0 | — | — | — | — |
 | 2026-11-14 | reel | Reel: Scribe AI case sheet | The case sheet writes itself (avg watch 3.0 s of 30 s; 289 views) | 6af7dbb6bb36d00909e6a217 | 2026-11-14-scribe-case-sheet | 211 | 8 | 0 | 6 | 4 | — | — |
 | 2026-11-14 | story | Reel teaser | Scribe reel teaser | 6af7dbbb4b28296eb1324c81 | 2026-11-14-scribe-case-sheet | 20 | 0 | 0 | — | — | — | — |
+| 2026-11-15 | story | This or that (b) | After a fall: Arnica or Hypericum? | 6af9289eb9a106584c85a16c | 2026-11-15-this-or-that-arnica | 23 | 1 | 0 | — | — | — | — |

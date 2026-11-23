@@ -60,3 +60,5 @@ Website clicks are measured only by UTM links in Google Analytics. Instagram "pr
 | 2026-11-14 | reel | Reel: Scribe AI case sheet | The case sheet writes itself (avg watch 3.0 s of 30 s; 289 views) | 6af7dbb6bb36d00909e6a217 | 2026-11-14-scribe-case-sheet | 211 | 8 | 0 | 6 | 4 | — | — |
 | 2026-11-14 | story | Reel teaser | Scribe reel teaser | 6af7dbbb4b28296eb1324c81 | 2026-11-14-scribe-case-sheet | 20 | 0 | 0 | — | — | — | — |
 | 2026-11-15 | story | This or that (b) | After a fall: Arnica or Hypericum? | 6af9289eb9a106584c85a16c | 2026-11-15-this-or-that-arnica | 23 | 1 | 0 | — | — | — | — |
+| 2026-11-16 | carousel | Practice & Compliance | Clinic rates display (CE Act 2010) | 6afa7b7ba869c35e5bb5b030 | 2026-11-16-clinic-rates-display | 12 | 2 | 0 | 0 | 0 | 0 | — |
+| 2026-11-16 | story | Carousel teaser | Clinic rates-display teaser | 6afa7b7fff465c57dace5801 | 2026-11-16-clinic-rates-display | 27 | 0 | 0 | — | — | — | — |

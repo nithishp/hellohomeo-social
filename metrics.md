@@ -62,3 +62,4 @@ Website clicks are measured only by UTM links in Google Analytics. Instagram "pr
 | 2026-11-15 | story | This or that (b) | After a fall: Arnica or Hypericum? | 6af9289eb9a106584c85a16c | 2026-11-15-this-or-that-arnica | 23 | 1 | 0 | — | — | — | — |
 | 2026-11-16 | carousel | Practice & Compliance | Clinic rates display (CE Act 2010) | 6afa7b7ba869c35e5bb5b030 | 2026-11-16-clinic-rates-display | 12 | 2 | 0 | 0 | 0 | 0 | — |
 | 2026-11-16 | story | Carousel teaser | Clinic rates-display teaser | 6afa7b7fff465c57dace5801 | 2026-11-16-clinic-rates-display | 27 | 0 | 0 | — | — | — | — |
+| 2026-11-17 | story | Product moment (c) | Vita AI compares Nux vomica vs Lycopodium | 6afbcb9ddf36f4d82566b407 | 2026-11-17-vita-compare | 28 | 0 | 0 | — | — | — | — |

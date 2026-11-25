@@ -63,3 +63,5 @@ Website clicks are measured only by UTM links in Google Analytics. Instagram "pr
 | 2026-11-16 | carousel | Practice & Compliance | Clinic rates display (CE Act 2010) | 6afa7b7ba869c35e5bb5b030 | 2026-11-16-clinic-rates-display | 12 | 2 | 0 | 0 | 0 | 0 | — |
 | 2026-11-16 | story | Carousel teaser | Clinic rates-display teaser | 6afa7b7fff465c57dace5801 | 2026-11-16-clinic-rates-display | 27 | 0 | 0 | — | — | — | — |
 | 2026-11-17 | story | Product moment (c) | Vita AI compares Nux vomica vs Lycopodium | 6afbcb9ddf36f4d82566b407 | 2026-11-17-vita-compare | 28 | 0 | 0 | — | — | — | — |
+| 2026-11-18 | carousel | Clinical Reference | Hepar sulph vs Silicea | 6afd1d6093fa11d37d03db54 | 2026-11-18-hepar-sulph-vs-silicea | 26 | 6 | 1 | 1 | 0 | 0 | — |
+| 2026-11-18 | story | Carousel teaser | Teaser of the Hepar sulph vs Silicea cover | 6afd1d64aa3b065dd96de59b | 2026-11-18-hepar-sulph-vs-silicea | 30 | 1 | 0 | — | — | — | — |

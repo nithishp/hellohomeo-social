@@ -65,3 +65,4 @@ Website clicks are measured only by UTM links in Google Analytics. Instagram "pr
 | 2026-11-17 | story | Product moment (c) | Vita AI compares Nux vomica vs Lycopodium | 6afbcb9ddf36f4d82566b407 | 2026-11-17-vita-compare | 28 | 0 | 0 | — | — | — | — |
 | 2026-11-18 | carousel | Clinical Reference | Hepar sulph vs Silicea | 6afd1d6093fa11d37d03db54 | 2026-11-18-hepar-sulph-vs-silicea | 26 | 6 | 1 | 1 | 0 | 0 | — |
 | 2026-11-18 | story | Carousel teaser | Teaser of the Hepar sulph vs Silicea cover | 6afd1d64aa3b065dd96de59b | 2026-11-18-hepar-sulph-vs-silicea | 30 | 1 | 0 | — | — | — | — |
+| 2026-11-19 | story | Sourced tip (a) | Let them talk; write their exact words (Organon §84) | 6afe6e9bf6b6aa0cd49b3d23 | 2026-11-19-tip-organon-84 | 33 | 0 | 0 | — | — | — | — |

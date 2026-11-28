@@ -1,0 +1,6 @@
+# 2026-W48 Reel — Dispense once. Stock updates. (billing & inventory)
+30 s, 1080×1920, 30 fps. Theme: dispense from the prescription → stock updates and low stock is flagged (oldest batch first) → the bill is ready, paid by UPI → books done by closing.
+- comp/index.html: deterministic composition (`seek(t)`); comp/render.js renders transparent overlay frames (serve comp/ on :8765, `node render.js range ../out/frames 0 30 30`).
+- tools/compose.sh 0.1 1.5: ink base + Higgsfield clip A (reel 2.25–7.0) and clip B (src 1.5 → reel 21.625–25.0), overlay frames, mix.
+- Audio: no voiceover (ElevenLabs credits exhausted); local music (tools/music.py, 106.7 BPM, lift 7.0, resolve 25.0) + local SFX; −14 LUFS, peak −2.5 dBFS. Headlines are the burned-in captions; out/captions.srt lists them.
+- Footage: FALLBACK. Live capture was attempted (demo-clinic doctor): billing and inventory dashboards return 401 for the doctor role, and the consultation capture failed the PII gate (patient contact details not in the roster), so all raw captures were deleted unsaved. UI rebuilt in HTML from nithishp/hellohomeo public/docs/*.webp (pharmacist-prescription-detail, inventory-dashboard, inventory-alerts, billing-invoice-create, billing-quick-bill, billing-dashboard) with a fictional patient.

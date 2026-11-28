@@ -1,0 +1,222 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<style>
+@font-face{font-family:Inter;font-weight:600;src:url(fonts/inter-latin-600-normal.woff2)}
+@font-face{font-family:Inter;font-weight:700;src:url(fonts/inter-latin-700-normal.woff2)}
+@font-face{font-family:Inter;font-weight:800;src:url(fonts/inter-latin-800-normal.woff2)}
+@font-face{font-family:Poppins;font-weight:400;src:url(fonts/poppins-latin-400-normal.woff2)}
+@font-face{font-family:Poppins;font-weight:500;src:url(fonts/poppins-latin-500-normal.woff2)}
+@font-face{font-family:Poppins;font-weight:600;src:url(fonts/poppins-latin-600-normal.woff2)}
+:root{--ink:#070C1F;--jade:#10B880;--jd:#06805A;--jod:#5FD6AC;--tint:#E8F8F1;--txt:#0B1220;--muted:#5F6878;--amber:#B45309}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1080px;height:1920px;overflow:hidden;background:transparent}
+body{font-family:Poppins;color:#fff;position:relative}
+#bg{position:absolute;inset:0;background:var(--ink);overflow:hidden}
+#dots{position:absolute;left:-200px;top:-200px;width:1480px;height:2400px;background-image:radial-gradient(rgba(95,214,172,.10) 2px,transparent 2.5px);background-size:48px 48px}
+#ghost{position:absolute;left:150px;width:860px;height:900px;top:470px;border-radius:40px;background:rgba(95,214,172,.05);border:2px solid rgba(95,214,172,.10)}
+.scene{position:absolute;inset:0;opacity:0}
+.head{position:absolute;left:72px;right:72px;top:250px;font-family:Inter;font-weight:800;font-size:92px;line-height:1.04;letter-spacing:-2.5px}
+.head .a{color:var(--jade)}
+.card{position:absolute;left:72px;width:936px;background:#fff;border-radius:32px;color:var(--txt);box-shadow:0 40px 80px -45px rgba(8,58,44,.45),0 0 0 2px rgba(16,184,128,.18);overflow:hidden}
+.pad{padding:38px 42px}
+.lbl{font-size:26px;font-weight:600;letter-spacing:2px;color:var(--muted)}
+.ttl{font-family:Poppins;font-weight:600;font-size:48px;color:var(--txt)}
+.pill{display:inline-flex;align-items:center;gap:10px;border-radius:999px;padding:8px 22px;font-size:28px;font-weight:600;white-space:nowrap}
+.pend{background:#FFF7E6;color:var(--amber);border:2px solid #FBD38D}
+.done{background:var(--tint);color:var(--jd);border:2px solid #9fe3c8}
+.med{border:2px solid #E6EAF0;border-radius:24px;padding:28px 30px;background:#F8FAFC}
+.mrow{display:flex;align-items:center;gap:20px}
+.cb{width:50px;height:50px;border-radius:12px;border:3px solid #94A3B8;display:flex;align-items:center;justify-content:center;flex:none;background:#fff}
+.cb.on{background:var(--jade);border-color:var(--jade)}
+.cb svg{width:34px;height:34px;opacity:0}
+.cb.on svg{opacity:1}
+.mn{font-weight:600;font-size:46px}
+.tag{display:inline-block;font-size:26px;font-weight:500;color:var(--jd);background:var(--tint);border-radius:10px;padding:2px 14px;margin:10px 0 0 70px}
+.grid4{display:grid;grid-template-columns:1fr 1fr;gap:16px 24px;margin:22px 0 0 70px}
+.k{font-size:30px;color:var(--muted)}.v{font-size:38px;font-weight:500}
+.avail{display:inline-flex;gap:10px;align-items:center;margin:26px 0 0 70px;border:2px solid #9fe3c8;background:#E3F6EE;color:var(--jd);border-radius:16px;padding:12px 24px;font-size:38px;font-weight:500}
+.avail b{font-weight:600;font-variant-numeric:tabular-nums;display:inline-block;min-width:118px}
+.disp{margin:18px 0 0 70px;border:2px solid #B6E6EA;background:#E6F6F8;color:#0E7490;border-radius:16px;padding:12px 22px;font-size:33px}
+.disp b{font-weight:600}
+.btn{height:96px;border-radius:22px;background:linear-gradient(90deg,#10B880,#0d9488);color:#fff;font-size:36px;font-weight:500;display:flex;align-items:center;justify-content:center;gap:14px;margin-top:28px}
+.btn svg{width:38px;height:38px}
+.stats{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.st{background:#fff;border-radius:28px;padding:30px 32px;color:var(--txt);box-shadow:0 30px 60px -40px rgba(8,58,44,.5),0 0 0 2px rgba(16,184,128,.15);position:relative;overflow:hidden}
+.st .n{font-family:Inter;font-weight:800;font-size:76px;letter-spacing:-2px;font-variant-numeric:tabular-nums}
+.st .t{font-size:34px;color:var(--muted)}
+.st.warn{box-shadow:0 0 0 3px #F59E0B,0 30px 60px -40px rgba(180,83,9,.5)}
+.st.warn .n{color:#D97706}
+.alert{display:flex;align-items:center;gap:22px;padding:28px 32px}
+.aico{width:72px;height:72px;border-radius:20px;background:#FFF3E0;display:flex;align-items:center;justify-content:center;flex:none}
+.aico svg{width:40px;height:40px}
+.an{font-weight:600;font-size:44px}.ar{font-size:33px;color:var(--muted)}
+.batch{display:flex;align-items:center;justify-content:space-between;padding:26px 32px;border-top:2px solid #EEF1F6;font-size:34px}
+.batch .bn{font-weight:600}.batch .bx{color:var(--muted)}
+.batch.use{background:#F3FBF7}
+.fifo{font-size:24px;font-weight:600;color:var(--jd);background:var(--tint);border-radius:10px;padding:2px 12px;margin-left:12px}
+.li{display:flex;justify-content:space-between;align-items:center;padding:24px 0;border-bottom:2px solid #EEF1F6;font-size:38px}
+.li span:last-child{font-weight:600;font-variant-numeric:tabular-nums}
+.tot{display:flex;justify-content:space-between;align-items:center;padding:24px 0 6px;font-family:Inter;font-weight:800;font-size:52px}
+.pm{display:flex;gap:16px;margin-top:22px}
+.pm div{flex:1;height:92px;font-size:36px!important;border-radius:18px;border:2px solid #E2E8F0;display:flex;align-items:center;justify-content:center;font-size:32px;font-weight:500;color:#334155;background:#F8FAFC}
+.pm div.on{border-color:var(--jade);background:var(--tint);color:var(--jd);box-shadow:0 0 0 6px rgba(16,184,128,.15)}
+.kin{position:absolute;left:72px;right:72px;font-family:Inter;font-weight:800;font-size:104px;letter-spacing:-3px;line-height:1.02;text-shadow:0 4px 30px rgba(0,0,0,.6)}
+.cta{position:absolute;left:0;right:0;text-align:center}
+#shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(7,12,31,.92) 0%,rgba(7,12,31,.55) 24%,rgba(7,12,31,0) 40%,rgba(7,12,31,0) 64%,rgba(7,12,31,.6) 82%,rgba(7,12,31,.85) 100%);opacity:0}
+</style></head>
+<body>
+<div id="bg"><div id="dots"></div><div id="ghost"></div></div>
+<div id="shade"></div>
+
+<!-- Prescription Details (rebuilt from public/docs/pharmacist-prescription-detail.webp; fictional patient) -->
+<div class="card" id="rx" style="top:580px">
+ <div class="pad">
+  <div style="display:flex;justify-content:space-between;align-items:center">
+   <div><div class="ttl">Prescription Details</div><div style="font-size:32px;color:var(--muted)">Kavya Menon · Dr. Demo</div></div>
+   <div class="pill pend" id="rxp">◷ Pending Dispensing</div>
+  </div>
+  <div style="font-family:Poppins;font-weight:600;font-size:34px;margin:30px 0 18px">Medications (1)</div>
+  <div class="med">
+   <div class="mrow"><div class="cb" id="cb"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.2"><path d="M20 6 9 17l-5-5"/></svg></div><div class="mn">Arnica Montana 30C</div></div>
+   <span class="tag">Drops</span>
+   <div class="grid4"><div><div class="k">Dosage</div><div class="v">3 drops</div></div><div><div class="k">Frequency</div><div class="v">Twice daily</div></div><div><div class="k">Duration</div><div class="v">7 days</div></div><div><div class="k">Quantity</div><div class="v">5 ml</div></div></div>
+   <div class="avail"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#06805A" stroke-width="2"><path d="m21 8-9-5-9 5 9 5 9-5zM3 8v8l9 5 9-5V8"/></svg>Available now: <b id="av">51 ml</b></div>
+   <div class="disp"><b>Dispensing:</b> 5 ml — ₹150 (deducts 5 ml from stock)</div>
+  </div>
+  <div class="btn" id="rxb"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg><span id="rxbt">Mark as Dispensed</span></div>
+ </div>
+</div>
+
+<div class="scene" id="s-hook"><div class="head" id="hh">Dispense once.<br><span class="a">Stock updates.</span></div></div>
+
+<div class="scene" id="s-a">
+ <div class="kin" id="k1" style="top:270px">Stock register.</div>
+ <div class="kin" id="k2" style="top:380px">Bill book.</div>
+ <div class="kin" id="k3" style="top:490px;color:var(--jod)">Every evening.</div>
+</div>
+
+<div class="scene" id="s-p1"><div class="head" id="h1">Dispense from<br><span class="a">the prescription.</span></div></div>
+
+<div class="scene" id="s-p2">
+ <div class="head" id="h2">Running low?<br><span class="a">It's flagged.</span></div>
+ <div class="stats" id="stats" style="position:absolute;left:72px;width:936px;top:560px">
+  <div class="st" id="sa"><div class="n">40</div><div class="t">Total Items</div></div>
+  <div class="st" id="sb"><div class="n" id="lown">0</div><div class="t">Low Stock</div></div>
+ </div>
+ <div class="card" id="al" style="top:860px">
+  <div class="alert"><div class="aico"><svg viewBox="0 0 24 24" fill="none" stroke="#D97706" stroke-width="2.2"><path d="M12 3 2 21h20L12 3z"/><path d="M12 10v5M12 18v.5"/></svg></div><div><div class="an">Arnica Montana 30C</div><div class="ar">Low stock · 46 ml left (minimum 50 ml)</div></div></div>
+  <div class="batch use" id="b1"><span><span class="bn">Batch A · expires Mar 2027</span><span class="fifo">used first</span></span><span class="bx">26 ml</span></div>
+  <div class="batch" id="b2"><span><span class="bn">Batch B · expires Jan 2028</span></span><span class="bx">20 ml</span></div>
+ </div>
+</div>
+
+<div class="scene" id="s-p3">
+ <div class="head" id="h3">The bill is ready.<br><span class="a">Paid by UPI.</span></div>
+ <div class="card" id="inv" style="top:600px">
+  <div class="pad">
+   <div style="display:flex;justify-content:space-between;align-items:center"><div><div class="ttl">Invoice</div><div style="font-size:32px;color:var(--muted)">Kavya Menon · today's visit</div></div><div class="pill pend" id="ivp">pending</div></div>
+   <div style="margin-top:18px">
+    <div class="li" id="l1"><span>Consultation</span><span>₹300</span></div>
+    <div class="li" id="l2"><span>Arnica Montana 30C · 5 ml</span><span>₹150</span></div>
+   </div>
+   <div class="tot" id="tt"><span>Total</span><span>₹450</span></div>
+   <div class="pm" id="pm"><div>Cash</div><div>Card</div><div id="upi">UPI</div><div>Bank</div></div>
+  </div>
+ </div>
+</div>
+
+<div class="scene" id="s-res">
+ <div class="head" id="h4">Stock and bills.<br><span class="a">Done by closing.</span></div>
+ <div class="stats" id="rs" style="position:absolute;left:72px;width:936px;top:560px">
+  <div class="st" id="r1"><div class="n" id="rn1">₹0</div><div class="t">Today's Revenue</div></div>
+  <div class="st" id="r2"><div class="n" id="rn2">₹0</div><div class="t">This Month</div></div>
+  <div class="st" id="r3"><div class="n" id="rn3">₹0</div><div class="t">Outstanding</div></div>
+  <div class="st" id="r4"><div class="n" id="rn4">0</div><div class="t">Total Invoices</div></div>
+ </div>
+</div>
+<div class="scene" id="s-b"><div class="kin" id="k4" style="top:300px">Counter closed.</div><div class="kin" id="k5" style="top:410px;color:var(--jod)">On time.</div></div>
+
+<div class="scene" id="s-cta">
+ <div class="cta" id="c1" style="top:400px"><div id="clogo" style="width:200px;height:200px;margin:0 auto"></div></div>
+ <div class="cta" id="c2" style="top:640px;font-family:Inter;font-weight:800;font-size:110px;letter-spacing:-3px">HelloHomeo</div>
+ <div class="cta" id="c3" style="top:790px;font-family:Inter;font-weight:700;font-size:64px;color:var(--jade)">hellohomeo.in</div>
+ <div class="cta" id="c4" style="top:930px"><span style="display:inline-block;border:3px solid var(--jade);border-radius:24px;padding:22px 40px;font-family:Inter;font-weight:800;font-size:58px;letter-spacing:-1px">30-day free trial</span>
+  <div style="font-size:40px;color:rgba(255,255,255,.85);margin-top:24px">Full access to all features.</div></div>
+</div>
+
+<script>
+const $=id=>document.getElementById(id);
+const cl=(x,a=0,b=1)=>Math.min(b,Math.max(a,x));
+const quint=x=>1-Math.pow(1-cl(x),5);
+const back=x=>{x=cl(x);const c1=1.4,c3=c1+1;return 1+c3*Math.pow(x-1,3)+c1*Math.pow(x-1,2)};
+const inC=x=>Math.pow(cl(x),3);
+function set(el,o,y=0,s=1,x=0){el.style.opacity=o;el.style.transform=`translate(${x}px,${y}px) scale(${s})`}
+window.ready=fetch('logo-dark.svg').then(r=>r.text()).then(s=>{$('clogo').innerHTML=s.replace('<svg','<svg width="200" height="200"')}).then(()=>document.fonts.ready);
+const S={hook:[0,2.25],a:[2.25,7.0],p1:[7.0,11.5],p2:[11.5,15.4375],p3:[15.4375,19.0],res:[19.0,21.625],b:[21.625,25.0],cta:[25.0,30.0]};
+const inS=(t,k)=>t>=S[k][0]&&t<S[k][1]; const loc=(t,k)=>t-S[k][0];
+// entrance (glide up+snap) and exit helpers
+const enter=(el,l,d=0,dist=70)=>{const p=quint((l-d)/0.5);set(el,cl((l-d)/0.25),(1-p)*dist)};
+function rxState(tick,roll,done){
+  $('cb').classList.toggle('on',tick);
+  const v=51-5*quint(roll); $('av').textContent=(Math.round(v))+' ml';
+  $('rxp').className='pill '+(done?'done':'pend'); $('rxp').textContent=done?'✓ Dispensed':'◷ Pending Dispensing';
+  $('rxbt').textContent=done?'Dispensed':'Mark as Dispensed';
+}
+window.seek=function(t){
+  document.querySelectorAll('.scene').forEach(e=>e.style.opacity=0);
+  $('shade').style.opacity=0; $('bg').style.opacity=1; set($('rx'),0);
+  $('dots').style.transform=`translateY(${-t*6}px)`; $('ghost').style.transform=`translateY(${-t*14}px)`;
+  // HOOK: frame 0 = box already ticked, stock rolling 51→46
+  if(inS(t,'hook')){ const l=loc(t,'hook'); $('s-hook').style.opacity=1;
+    set($('hh'),1,0);
+    rxState(true,cl((l+0.15)/1.0), l>0.9); set($('rx'),1,0,1+0.012*l);
+    $('rxb').style.filter=l>0.75&&l<0.95?'brightness(.9)':'none';
+    if(l>1.95){const o=quint((l-1.95)/0.3); set($('rx'),1-o,-40*o); $('hh').style.opacity=1-o;}
+  }
+  // A: clinic clip with kinetic pain line
+  if(inS(t,'a')){ const l=loc(t,'a'); $('s-a').style.opacity=1; $('bg').style.opacity=0; $('shade').style.opacity=1;
+    enter($('k1'),l,0.25); enter($('k2'),l,1.25); enter($('k3'),l,2.3);
+    if(l>4.45){const o=cl((l-4.45)/0.3); $('s-a').style.opacity=1-o;}
+  }
+  // P1: prescription → mark dispensed (match card)
+  if(inS(t,'p1')){ const l=loc(t,'p1'); $('s-p1').style.opacity=1;
+    enter($('h1'),l,0.05); const p=quint((l-0.2)/0.6); set($('rx'),cl((l-0.2)/0.3),(1-p)*140,0.96+0.04*p);
+    rxState(l>1.6, cl((l-2.55)/0.9), l>2.5);
+    $('rxb').style.filter=(l>2.3&&l<2.5)?'brightness(.88)':'none';
+    $('rx').style.transform+=` translateY(${-12*cl((l-2.5)/2)}px)`;
+    if(l>4.15){const o=quint((l-4.15)/0.35); set($('rx'),1-o,-120*o); $('h1').style.opacity=1-o;}
+  }
+  // P2: inventory low-stock alert + FIFO batches
+  if(inS(t,'p2')){ const l=loc(t,'p2'); $('s-p2').style.opacity=1;
+    enter($('h2'),l,0.05); enter($('sa'),l,0.15); enter($('sb'),l,0.25);
+    $('lown').textContent=l>1.05?'1':'0'; $('sb').classList.toggle('warn',l>1.05);
+    const s=back((l-1.0)/0.5); set($('al'),cl((l-1.0)/0.2),(1-s)*90);
+    enter($('b1'),l,1.9,30); enter($('b2'),l,2.15,30);
+    if(l>3.6){const o=quint((l-3.6)/0.33); $('s-p2').style.opacity=1-o;}
+  }
+  // P3: invoice auto-made, UPI paid
+  if(inS(t,'p3')){ const l=loc(t,'p3'); $('s-p3').style.opacity=1;
+    enter($('h3'),l,0.05); enter($('inv'),l,0.15,120);
+    enter($('l1'),l,0.45,24); enter($('l2'),l,0.65,24); enter($('tt'),l,0.85,24); enter($('pm'),l,1.05,24);
+    $('upi').classList.toggle('on',l>1.75); const paid=l>2.35;
+    $('ivp').className='pill '+(paid?'done':'pend'); $('ivp').textContent=paid?'✓ paid':'pending';
+    if(l>3.25){const o=quint((l-3.25)/0.3); $('s-p3').style.opacity=1-o;}
+  }
+  // RESULT: calm dashboard
+  if(inS(t,'res')){ const l=loc(t,'res'); $('s-res').style.opacity=1;
+    enter($('h4'),l,0.05); ['r1','r2','r3','r4'].forEach((id,i)=>enter($(id),l,0.15+0.1*i));
+    const c=quint((l-0.4)/1.1); const f=v=>'₹'+Math.round(v).toLocaleString('en-IN'); $('rn1').textContent=f(4350*c); $('rn2').textContent=f(38640*c); $('rn3').textContent='₹0'; $('rn4').textContent=Math.round(107*c);
+    if(l>2.35){const o=cl((l-2.35)/0.27); $('s-res').style.opacity=1-o;}
+  }
+  if(inS(t,'b')){ const l=loc(t,'b'); $('s-b').style.opacity=1; $('bg').style.opacity=0; $('shade').style.opacity=1;
+    enter($('k4'),l,0.3); enter($('k5'),l,1.0);
+    if(l>3.1){const o=cl((l-3.1)/0.27); $('s-b').style.opacity=1-o; $('bg').style.opacity=o;}
+  }
+  if(inS(t,'cta')){ const l=loc(t,'cta'); $('s-cta').style.opacity=1;
+    set($('c1'),cl(l/0.3),0,0.85+0.15*back(l/0.5)); enter($('c2'),l,0.25); enter($('c3'),l,0.5); enter($('c4'),l,0.8);
+    // loop setup: CTA lifts away, prescription card returns as in frame 0
+    if(l>4.3){const o=quint((l-4.3)/0.55); $('s-cta').style.opacity=1-o; set($('rx'),o,(1-o)*160); rxState(true,0.15,false); $('s-hook').style.opacity=o; $('hh').style.opacity=o;}
+  }
+};
+</script>
+</body></html>

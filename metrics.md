@@ -68,3 +68,5 @@ Website clicks are measured only by UTM links in Google Analytics. Instagram "pr
 | 2026-11-19 | story | Sourced tip (a) | Let them talk; write their exact words (Organon §84) | 6afe6e9bf6b6aa0cd49b3d23 | 2026-11-19-tip-organon-84 | 33 | 0 | 0 | — | — | — | — |
 | 2026-11-20 | carousel | Clinic in Action | Prescriptions in five parts | 6affc085738ce4635f831f5b | 2026-11-20-prescription-five-parts | 18 | 6 | 0 | 1 | 1 | 0 | — |
 | 2026-11-20 | story | Carousel teaser | Prescription five-parts teaser | 6affc089ca85ebefb0f2767d | 2026-11-20-prescription-five-parts | 32 | 0 | 0 | — | — | — | — |
+| 2026-11-21 | reel | Reel: follow-ups & reminders | Book once. Reminders go out. (avg watch 3.4 s of 30 s; 88 views) | 6b011579d9cbb430a118d079 | 2026-11-21-follow-ups-reminders | 59 | 7 | 0 | 2 | 0 | — | — |
+| 2026-11-21 | story | Reel teaser | Follow-ups reel teaser | 6b01157d5e993799d84d1f36 | 2026-11-21-follow-ups-reminders | 27 | 2 | 0 | — | — | — | — |

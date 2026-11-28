@@ -1,0 +1,31 @@
+1
+00:00:00,000 --> 00:00:02,200
+Dispense once. Stock updates.
+
+2
+00:00:02,400 --> 00:00:06,900
+Stock register. Bill book. Every evening.
+
+3
+00:00:07,000 --> 00:00:11,400
+Dispense from the prescription.
+
+4
+00:00:11,500 --> 00:00:15,400
+Running low? It's flagged.
+
+5
+00:00:15,450 --> 00:00:18,950
+The bill is ready. Paid by UPI.
+
+6
+00:00:19,000 --> 00:00:21,600
+Stock and bills. Done by closing.
+
+7
+00:00:21,700 --> 00:00:24,950
+Counter closed. On time.
+
+8
+00:00:25,000 --> 00:00:29,900
+HelloHomeo · hellohomeo.in · 30-day free trial. Full access to all features.
